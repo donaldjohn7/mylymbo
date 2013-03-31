@@ -1,0 +1,1648 @@
+ <!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+
+<head profile="http://gmpg.org/xfn/11">
+
+
+	<meta charset="UTF-8" />
+
+
+<title>Gay Lifestyles: Acceptance and Awareness &#8211; MyLymbo</title> 
+
+
+<meta name="description" content="" />
+
+
+<meta name="keywords" content="" />
+
+
+	<link rel="stylesheet" href="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/style.css" type="text/css" media="screen" />
+
+
+    <link rel="shortcut icon" href="http://www.mylymbo.com/favicon.ico" />
+
+
+    <link rel="shortcut icon" href="http://www.mylymbo.com/favicon.ico" type="image/x-icon" />
+
+
+    <meta name="generator" content="Magazine3 Framework Version 3.0" />
+
+
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+
+	<link rel="alternate" type="application/rss+xml" title="MyLymbo RSS Feed" href="http://mylymbo.com/feed/" />
+
+
+	<link rel="pingback" href="http://mylymbo.com/xmlrpc.php" />
+
+
+	<script type="text/javascript" src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/js/jquery-1.4.4.min.js"></script>
+
+
+	<script type="text/javascript" src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/js/ddsmoothmenu.js"></script> 
+
+
+    <script type="text/javascript" src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/js/jquery.tools.min.js"></script>
+
+
+ <script type="text/javascript">
+
+
+var $ = jQuery.noConflict();
+
+
+$(document).ready(function() {
+
+
+
+
+
+	//When page loads...
+
+
+	$(".tab_content").hide(); //Hide all content
+
+
+	$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+
+
+	$(".tab_content:first").show(); //Show first tab content
+
+
+
+
+
+	//On Click Event
+
+
+	$("ul.tabs li").click(function() {
+
+
+
+
+
+		$("ul.tabs li").removeClass("active"); //Remove any "active" class
+
+
+		$(this).addClass("active"); //Add "active" class to selected tab
+
+
+		$(".tab_content").hide(); //Hide all tab content
+
+
+
+
+
+		var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+
+
+		$(activeTab).fadeIn(); //Fade in the active ID content
+
+
+		return false;
+
+
+	});
+
+
+
+
+
+});
+
+
+</script>
+
+
+ <script type="text/javascript">
+
+
+$(document).ready(function() {
+
+
+	//Tooltips
+
+
+	$(".tip_trigger").hover(function(){
+
+
+		tip = $(this).find('.tip');
+
+
+		tip.show(); //Show tooltip
+
+
+	}, function() {
+
+
+		tip.hide(); //Hide tooltip		  
+
+
+	}).mousemove(function(e) {
+
+
+		var mousex = e.pageX + 20; //Get X coodrinates
+
+
+		var mousey = e.pageY + 20; //Get Y coordinates
+
+
+		var tipWidth = tip.width(); //Find width of tooltip
+
+
+		var tipHeight = tip.height(); //Find height of tooltip
+
+
+		
+
+
+		//Distance of element from the right edge of viewport
+
+
+		var tipVisX = $(window).width() - (mousex + tipWidth);
+
+
+		//Distance of element from the bottom of viewport
+
+
+		var tipVisY = $(window).height() - (mousey + tipHeight);
+
+
+		  
+
+
+		if ( tipVisX < 20 ) { //If tooltip exceeds the X coordinate of viewport
+
+
+			mousex = e.pageX - tipWidth - 20;
+
+
+		} if ( tipVisY < 20 ) { //If tooltip exceeds the Y coordinate of viewport
+
+
+			mousey = e.pageY - tipHeight - 20;
+
+
+		} 
+
+
+		tip.css({  top: mousey, left: mousex });
+
+
+	});
+
+
+});
+
+
+
+
+
+</script>
+
+
+	 <script type="text/javascript">
+
+
+ $(document).ready(function() {
+
+
+
+
+
+ $("div.scrollable").scrollable({
+
+
+
+
+
+		size: 3,
+
+
+		items: '#thumbs',   
+
+
+		hoverClass: 'hover',
+
+
+		speed: 400,
+
+
+		keyboard: false,
+
+
+		clickable: false
+
+
+
+
+
+	}).navigator();	
+
+
+	  
+
+
+  		
+
+
+});
+
+
+</script>
+
+
+  
+
+
+ <script type="text/javascript">   
+
+
+
+
+
+  // when the DOM is ready...        
+
+
+
+
+
+$(document).ready(function () {      
+
+
+
+
+
+  // load the ticker                 
+
+
+
+
+
+	createTicker();                    
+
+
+
+
+
+});                                  
+
+
+
+
+
+function createTicker(){             
+
+
+
+
+
+	// put all list elements within #ticker-area into array   
+
+
+
+
+
+	var tickerLIs = $("#ticker-area ul").children();          
+
+
+
+
+
+	tickerItems = new Array();                                
+
+
+
+
+
+	tickerLIs.each(function(el) {                             
+
+
+
+
+
+		tickerItems.push( jQuery(this).html() );                
+
+
+
+
+
+	});                                                       
+
+
+
+
+
+	i = 0                                                     
+
+
+
+
+
+	rotateTicker();                                           
+
+
+
+
+
+}                                                           
+
+
+
+
+
+function rotateTicker(){                                    
+
+
+
+
+
+	if( i == tickerItems.length ){                            
+
+
+
+
+
+	  i = 0;                                                  
+
+
+
+
+
+	}                                                         
+
+
+
+
+
+  tickerText = tickerItems[i];                              
+
+
+
+
+
+	c = 0;                                                    
+
+
+
+
+
+	typetext();                                               
+
+
+
+
+
+	setTimeout( "rotateTicker()", 5000 );                     
+
+
+
+
+
+	i++;                                                      
+
+
+
+
+
+}                                                           
+
+
+
+
+
+var isInTag = false;                                        
+
+
+
+
+
+function typetext() {	                                      
+
+
+
+
+
+	var thisChar = tickerText.substr(c, 1);                   
+
+
+
+
+
+	if( thisChar == '<' ){ isInTag = true; }                  
+
+
+
+
+
+	if( thisChar == '>' ){ isInTag = false; }                 
+
+
+
+
+
+	$('#ticker-area').html("&nbsp;" + tickerText.substr(0, c++));   
+
+
+
+
+
+	if(c < tickerText.length+1)                                     
+
+
+
+
+
+		if( isInTag ){                                                
+
+
+
+
+
+			typetext();                                                 
+
+
+
+
+
+		}else{                                                        
+
+
+
+
+
+			setTimeout("typetext()", 28);                               
+
+
+
+
+
+		}                                                             
+
+
+
+
+
+	else {                                                          
+
+
+
+
+
+		c = 1;                                                        
+
+
+
+
+
+		tickerText = "";                                              
+
+
+
+
+
+	}	                                                              
+
+
+
+
+
+}                                                                 
+
+
+
+
+
+  </script> 
+
+
+			
+
+
+	
+
+ 
+
+   <style>#content .post {
+
+
+    border: none !important; </style> 
+
+
+ 
+
+  	<link rel="alternate" type="application/rss+xml" title="MyLymbo &raquo; Gay Lifestyles: Acceptance and Awareness Comments Feed" href="http://mylymbo.com/bible-focus/gay-lifestyles-acceptance-and-awareness/feed/" />
+<link rel='stylesheet' id='mailchimpSF_main_css-css'  href='http://mylymbo.com/?mcsf_action=main_css&#038;ver=3.5.1' type='text/css' media='all' />
+<!--[if IE]>
+<link rel='stylesheet' id='mailchimpSF_ie_css-css'  href='http://mylymbo.com/wp-content/plugins/mailchimp/css/ie.css?ver=3.5.1' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='jetpack-widgets-css'  href='http://mylymbo.com/wp-content/plugins/jetpack/modules/widgets/widgets.css?ver=20121003' type='text/css' media='all' />
+<script type='text/javascript' src='http://mylymbo.com/wp-includes/js/jquery/jquery.js?ver=1.8.3'></script>
+<script type='text/javascript' src='http://mylymbo.com/wp-content/plugins/mailchimp/js/scrollTo.js?ver=1.2.10'></script>
+<script type='text/javascript' src='http://mylymbo.com/wp-includes/js/jquery/jquery.form.min.js?ver=2.73'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mailchimpSF = {"ajax_url":"http:\/\/mylymbo.com\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://mylymbo.com/wp-content/plugins/mailchimp/js/mailchimp.js?ver=1.2.10'></script>
+<script type='text/javascript' src='http://mylymbo.com/wp-includes/js/comment-reply.min.js?ver=3.5.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mylymbo.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mylymbo.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Often times, we dont listen: A brief parable' href='http://mylymbo.com/news/hear/just-dont-listen/' />
+<link rel='next' title='A bit about understanding' href='http://mylymbo.com/featured/understanding-2/' />
+<meta name="generator" content="WordPress 3.5.1" />
+<link rel='canonical' href='http://mylymbo.com/bible-focus/gay-lifestyles-acceptance-and-awareness/' />
+<link rel='shortlink' href='http://wp.me/p1H2JO-25' />
+
+			<link rel="stylesheet" type="text/css" href="http://mylymbo.com/index.php?ak_action=aktt_css&v=2.4" />
+			<script type="text/javascript" src="http://mylymbo.com/index.php?ak_action=aktt_js&v=2.4"></script>
+		<link rel="stylesheet" type="text/css" href="http://mylymbo.com/wp-content/plugins/wp-recaptcha/recaptcha.css" />  
+
+
+      <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css' />
+
+
+       <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css' />
+
+
+       <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold&subset=latin' rel='stylesheet' type='text/css' />
+
+
+       <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css' />
+
+
+ 
+
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24470917-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<link rel="canonical" href="http://mylymbo.com/bible-focus/gay-lifestyles-acceptance-and-awareness/" />
+
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+
+
+<div id="wrapper">
+
+
+
+
+
+	<header><div id="topmenu">
+
+
+<div id="topmenuleft">
+
+
+			<div id="topMenu" class="ddsmoothmenu"><ul id="menu-nav-menu" class="menu"><li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="http://www.mylymbo.com">Home</a></li>
+<li id="menu-item-302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-302"><a href="http://mylymbo.com/?page_id=58">About ML</a></li>
+<li id="menu-item-301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-301"><a href="http://mylymbo.com/contact/">Contact</a></li>
+</ul></div>
+
+</div>
+
+
+<div id="topmenuright">
+
+
+ <ul>
+
+
+ <li id="rssb">
+
+
+ Sat, Mar 2013
+
+ </li>
+
+
+ <li class="rssnav"><a href="http://mylymbo.com/?feed=atom">RSS</a></li>
+
+
+ <li><a href="">Newsletter</a></li>
+
+
+ </ul>
+
+
+</div>
+
+
+</div>
+
+
+	 
+
+
+     <div id="logowrap">
+
+
+     <div id="logo"><a href="http://mylymbo.com"><img src="http://www.mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/ml-logo.png" alt="MyLymbo.com" /></a></div>
+
+
+     <div id="logohead">
+
+
+     <div id="headad">  
+
+
+     
+
+
+     </div>
+
+
+     <div id="twfb">
+
+
+     <ul>   <li>  <a href="http://www.facebook.com/pages/MyLymbocom/237638213205" target="_blank"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/facebook.png" alt="Become a Fan!" /></a></li>
+
+
+ <li> 
+
+
+   <a href="http://twitter.com/mylymbo" class="tip_trigger"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/twitter.png" alt="Follow On Twitter" /><span class="tip">    <ul id="twitter_update_list">
+
+
+    </ul>
+
+
+    <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script><script type="text/javascript" src="http://twitter.com/statuses/user_timeline/mylymbo.json?callback=twitterCallback2&count=1"></script>
+
+
+
+
+
+</span></a>
+
+
+     </li>
+
+
+   
+
+
+      <li> <a href="http://mylymbo.com/?feed=atom"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/rssicon.png" alt="Subcribe to Our RSS Feed" /></a></li>
+
+
+     </ul>
+
+
+     </div>
+
+
+     </div>
+
+
+     <div id="cb"></div>
+
+
+     </div>    <div id="cb"></div>
+
+
+		<nav>
+
+
+	<div id="navigation">
+
+
+			<div id="nav" class="ddsmoothmenu1"><ul id="menu-main-menu" class="menu"><li id="menu-item-5" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5"><a href="http://mylymbo.com/category/featured/">Featured</a></li>
+<li id="menu-item-6" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-6"><a href="http://mylymbo.com/category/news/">News</a></li>
+<li id="menu-item-94" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-94"><a href="http://mylymbo.com/category/ml-boxing/">ML Boxing</a></li>
+<li id="menu-item-95" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-95"><a href="http://mylymbo.com/category/news/hear/">Hear</a></li>
+<li id="menu-item-8" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8"><a href="http://mylymbo.com/category/feel/">Feel</a></li>
+<li id="menu-item-96" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-96"><a href="http://mylymbo.com/category/react/">React</a></li>
+</ul></div>
+
+</div>
+
+
+		</nav>
+
+
+      
+
+
+	 
+
+
+	</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section>    
+  <div id="headgal">
+	<div id="featured" style="padding-left: 14px !important;">
+		<a class="prevPage browse left"></a>
+		<div class="scrollable" style="height: 60px !important">	
+			<div id="thumbs">
+  
+   
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/react/the-deceived-noble-soldier/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2011/08/s1-50x45.jpg" class="attachment-singlegalthumb wp-post-image" alt="s" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/react/the-deceived-noble-soldier/" title="The Deceived Noble Soldier">The Deceived Noble Soldier</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/bible-focus/are-you-eating-every-day/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2011/07/breadBible-50x45.jpg" class="attachment-singlegalthumb wp-post-image" alt="breadBible" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/bible-focus/are-you-eating-every-day/" title="Are you eating every day?">Are you eating every day?</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/bible-focus/scripture-teaching-a-chicken-latin/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2011/07/bible-reading-guy-782907121-50x45.jpg" class="attachment-singlegalthumb wp-post-image" alt="bible-reading-guy-78290712" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/bible-focus/scripture-teaching-a-chicken-latin/" title="Scripture: teaching a chicken latin">Scripture: teaching a chicken latin</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/react/its-not-about-religion-its-about-relationship/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2011/07/RainbowCoexistPosterSymbolsVersionEMAIL-50x45.jpg" class="attachment-singlegalthumb wp-post-image" alt="RainbowCoexistPosterSymbolsVersionEMAIL" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/react/its-not-about-religion-its-about-relationship/" title="It&#8217;s not about religion, its about relationship.">It&#8217;s not about religion, its about relationship.</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/react/for-aspiring-and-current-gospel-artists/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2011/07/lampmode-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="lampmode" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/react/for-aspiring-and-current-gospel-artists/" title="For aspiring and current gospel artists">For aspiring and current gospel artists</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/bible-focus/follow-your-heart/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/10/follow_your_heart-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="follow_your_heart" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/bible-focus/follow-your-heart/" title="Dissecting the phrase: &#8220;Follow Your Heart&#8221;">Dissecting the phrase: &#8220;Follow Your Heart&#8221;</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/react/solid-rock/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/09/unstable-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="unstable" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/react/solid-rock/" title="On Christ the Solid Rock i stand &#8211; all other ground is sinking sand.">On Christ the Solid Rock i stand &#8211; all other ground is sinking sand.</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/bible-focus/broken-software/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/08/broken-software-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="broken-software" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/bible-focus/broken-software/" title="Why on earth am i here? &#8211; broken software">Why on earth am i here? &#8211; broken software</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/featured/just-give-em-a-mic/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/08/microphone1-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="microphone" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/featured/just-give-em-a-mic/" title="Just give &#8216;em a mic">Just give &#8216;em a mic</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/react/in-line/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/07/line1-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="line" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/react/in-line/" title="In Line: what i learned from being in line at the apple store">In Line: what i learned from being in line at the apple store</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/feeling/are-we-in-this-thing-or-what/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/03/pentecost1-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="pentecost" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/feeling/are-we-in-this-thing-or-what/" title="Are We In This Thing or what?">Are We In This Thing or what?</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/feeling/battleground-from-dead-to-alive/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/02/urban1-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="urban" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/feeling/battleground-from-dead-to-alive/" title="Battleground: from dead to alive">Battleground: from dead to alive</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  	 
+			</div>			 
+		</div> 
+		<a class="nextPage browse right"></a>
+	<div id="theticker">
+    <div id="m3ticker">
+       <div id="tickimg">        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/youarehere.png" alt="" />    </div>  
+          <div id="m3crumbs">	<div id="crumbs"><a href="http://mylymbo.com">Home</a> &raquo; <a href="http://mylymbo.com/category/bible-focus/" title="View all posts in Bible Focus">Bible Focus</a> &raquo; <span class="current">Gay Lifestyles: Acceptance and Awareness</span></div></div>
+   <div id="cb"></div>
+    </div>  <div class="navi"></div>  <div id="cb"></div>
+    </div>
+    </div>       
+ <div id="content">	
+	
+
+		<article class="post">
+			<h2>  Gay Lifestyles: Acceptance and Awareness</h2>
+			<div class="pmetasingle"> Posted In <a href="http://mylymbo.com/category/bible-focus/" title="View all posts in Bible Focus" rel="category tag">Bible Focus</a>, <a href="http://mylymbo.com/category/news/hear/" title="View all posts in Hear" rel="category tag">Hear</a> - By <b><a href="http://mylymbo.com/author/admin/" title="View all posts by Donald John">Donald John </a></b>  
+            	       On Saturday, January 22nd, 2011 With
+    <a href="#comments"> 4 Comments</a>  
+        
+            </div>
+              
+    <center></center>
+			<div class="entry">
+			  <p><span class="full-image-block ssNonEditable"><span class="thumbnail-caption" style="width: 600px;"> </span></span></p>
+<div id="_mcePaste" style="text-align: left;"><strong><a onclick="javascript:_gaq.push(['_trackPageview', '/download/wp-content/uploads/2011/01/kidsbook.png']);"  href="http://mylymbo.com/wp-content/uploads/2011/01/kidsbook.png"><img class="size-full wp-image-311" title="kidsbook" src="http://mylymbo.com/wp-content/uploads/2011/01/kidsbook.png" alt="" width="660" height="330" /></a><br />
+Article Link: http://www.wnd.com/?pageId=40339</strong></div>
+<div id="_mcePaste">The Above story was brought to my attention through a Christian apologist speaking on the homosexual agenda here in America. The article is about a father in Massachusetts who wanted to pull his child out of a section of her elementary school class because the school decided to introduce homosexual lifestyles suddenly in their curriculum. Specifically, a book <strong><strong><a onclick="javascript:_gaq.push(['_trackPageview', '/out/en.wikipedia.org/wiki/King_%26_King']);"  href="http://en.wikipedia.org/wiki/King_%26_King">&#8220;King and King&#8221;</a> </strong></strong>was being read which tells the story of a prince who marries another prince. The father, David Parker, addresses it and the matter is brought to court where the school&#8217;s choice in retaining all students while teaching on homosexual lifestyles is upheld. Parker is later arrested for refusing to leave a school meeting until his concern is addressed.</div>
+<div><strong>There is a difference between making the existence of homosexual relationships known to children and giving them the notion those relationships are ok</strong>. A very big difference. In the case above, this task has been handed over to the school system. Simply spoken, the children in the school system MUST be allowed to opt out of these teachings because they present a homosexual life style in a positive light (as if it is different but perfectly ok) &#8211; which is against Biblical truth.</div>
+<div id="_mcePaste">I almost cower at the thought of what God is feeling on this issue. He has said, &#8220;It would be better to be thrown into the sea with a millstone hung around your neck than to cause one of these little ones to fall into sin.&#8221; (Luke 17:2) We have to take this very seriously.</div>
+<div><strong>On homosexuality:</strong></div>
+<div id="_mcePaste">Romans 1:26-27 reads, &#8221;Because of this, God gave them over to shameful lusts. Even their women exchanged natural sexual relations for unnatural ones.  In the same way the men also abandoned natural relations with women and were inflamed with lust for one another. Men committed shameful acts with other men, and received in themselves the due penalty for their error.&#8221;</div>
+<div id="_mcePaste">Go ahead and check out the whole chapter.</div>
+<div id="_mcePaste">All scripture is from God. This passage is very clear in what it says. It is not the only of its kind. On this Christian journey, we must resist all lust and temptation, and above is another tenant for us to live by. If you are a Christian, and a practicing homosexual, now is the time to go to biblical truth. Do not delay. Do not seek those who will tell you what you want to here. You are not alone, all temptations are common to all men. You are not a sore thumb, however, you need to cling to God&#8217;s truth and hold to it with more force than your pride, temptation, or sexual identity. Again I say, seek God&#8217;s truth. Start with the passage above.</div>
+<div><strong>These are the times where we will see a direct clash with God&#8217;s truth and man&#8217;s doctrine.</strong> This story in Massachusetts sets America&#8217;s taste for diversity against God&#8217;s law. Again, there is a sharp difference between teaching the existence of gay relationships and teaching the acceptance of gay lifestyles as ok.</div>
+<div id="_mcePaste"><strong>Donald John</strong></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+			</div>
+			
+			<div class="ptags">Tags: <a href="http://mylymbo.com/tag/children/" rel="tag">children</a>, <a href="http://mylymbo.com/tag/gay/" rel="tag">gay</a>, <a href="http://mylymbo.com/tag/homosexuality/" rel="tag">homosexuality</a>, <a href="http://mylymbo.com/tag/school/" rel="tag">school</a>, <a href="http://mylymbo.com/tag/teaching/" rel="tag">teaching</a></div>
+		</article>
+	
+  
+    <center></center>
+
+  
+      <style>input, textarea{}
+#authorarea{border:#9EBAC7 1px solid; margin:10px 0px; padding:6px 8px 14px 6px; background-repeat:no-repeat; color:#555; background-color:#e2eaee}
+#authorarea h3{font-size:14px; color:#333; font-weight:bold; margin:0}
+#authorarea h3 a{text-decoration:none; color:#333; font-weight:bold}
+#authorarea img{margin:0;  float:left; border:1px solid #ddd; width:60px; height:60px;  margin-right:12px}
+#authorarea p{color:#333; margin:0}
+#authorarea p a{color:#333}
+.authorinfo{ }
+</style>
+<div id="authorarea">
+<img src="http://mylymbo.com/wp-content/uploads/userphoto/1.thumbnail.jpg" alt="Donald John" width="79" height="80" class="photo" />
+<div class="authorinfo">
+<p><b>About <a href="http://mylymbo.com/author/admin/" title="Posts by Donald John" rel="author">Donald John</a></b> - </p>
+</div>
+</div>    
+
+<div id="related" class="clearfix">
+	<div id="sharemark">
+<div style="float: left;"><h1>Related Posts</h1></div>
+ <div class="share">
+                 <ul> <li>
+                      <a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent('http://mylymbo.com/bible-focus/gay-lifestyles-acceptance-and-awareness/')+'&amp;title='+encodeURIComponent('Gay Lifestyles: Acceptance and Awareness'),'delicious', 'toolbar=no,width=550,height=550'); return false;"> 
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/delicious.png" alt="Add to Delicious" border="0" /></a> 
+                      </li>  
+                      <li>
+                      <a href="javascript:var d=document,f='http://www.facebook.com/share',l=d.location,e=encodeURIComponent,p='.php?src=bm&amp;v=4&amp;i=1245532349&amp;u='+e(l.href)+'&amp;t='+e(d.title);1;try{if (!/^(.*\.)?facebook\.[^.]*$/.test(l.host))throw(0);share_internal_bookmarklet(p)}catch(z) {a=function() {if (!window.open(f+'r'+p,'sharer','toolbar=0,status=0,resizable=1,width=626,height=436'))l.href=f+p};if (/Firefox/.test(navigator.userAgent))setTimeout(a,0);else{a()}}void(0)" onclick="return wait_for_load(this, event, function() { return false });" id="share_bookmark" title="Share on Facebook">
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/facebookicon.png" border="0" /></a>
+                      </li>
+                      <li>
+
+                      <a href="http://friendfeed.com/?url=http://mylymbo.com/bible-focus/gay-lifestyles-acceptance-and-awareness/&amp;title=Gay Lifestyles: Acceptance and Awareness" target="_blank">
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/friendfeed.png" alt="Share on FriendFeed" border="0" /></a> </li>
+               <li>
+                <a href='javascript:(function(){var a=window,b=document,c=encodeURIComponent,d=a.open("http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk="+c(b.location)+"&amp;title="+c(b.title),"bkmk_popup","left="+((a.screenX||a.screenLeft)+10)+",top="+((a.screenY||a.screenTop)+10)+",height=420px,width=550px,resizable=1,alwaysRaised=1");a.setTimeout(function(){d.focus()},300)})();'> 
+ <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/google.png" border="0" /> </a>
+
+   </li>
+    <li><a href="http://digg.com/submit?phase=2&url=http://mylymbo.com/bible-focus/gay-lifestyles-acceptance-and-awareness/&title=Gay Lifestyles: Acceptance and Awareness"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/digg.png" alt="Digg" /></a></li>
+
+                        <li><a href="http://twitter.com/home?status=Currently reading http://mylymbo.com/bible-focus/gay-lifestyles-acceptance-and-awareness/"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/twittericon.png" alt="" width="32px" height="32px" /></a></li>
+                      <li>  
+
+                      <a href="http://www.reddit.com/submit" onclick="window.location = 'http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> 
+
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/reddit.png" alt="submit to reddit" border="0" /> </a>
+                      </li>
+                      <li>      <a href="javascript:location.href='http://www.myspace.com/Modules/PostTo/Pages/?c='+encodeURIComponent(location.href)+'&amp;t='+encodeURIComponent(document.title)"> 
+
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/myspace.png" border="0" /> </a>
+                      </li>
+                      <li>   
+                      <a href="http://www.stumbleupon.com/submit?url=http://mylymbo.com/bible-focus/gay-lifestyles-acceptance-and-awareness/&title=Gay Lifestyles: Acceptance and Awareness">
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/stumbleupon.png" border="0" /></a>    
+                      </li>
+                      <li>   
+                      <a href="javascript:void(document.location='http://technorati.com/faves?sub=favthis&amp;add='+escape(document.location))">
+
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/technorati.png" border="0" /></a> 
+                      </li>
+                        <li>   
+                      <a href="RSS">
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/rssiconsingle.png" border="0" /></a> 
+                      </li>
+                     </ul> </div>
+	<div id="cb"></div>
+</div>
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/bible-focus/are-you-eating-every-day/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2011/07/breadBible-150x125.jpg" class="attachment-relatedimg wp-post-image" alt="breadBible" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/bible-focus/are-you-eating-every-day/" rel="bookmark" title="Are you eating every day?">Are you eating every day?</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/bible-focus/dont-judge-me/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2011/07/djm-150x125.jpg" class="attachment-relatedimg wp-post-image" alt="djm" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/bible-focus/dont-judge-me/" rel="bookmark" title="Don&#8217;t Judge Me!!!!!!">Don&#8217;t Judge Me!!!!!!</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/bible-focus/the-3-youtube-videos-that-changed-my-outlook-forever/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2011/07/aleistercrowley4-150x125.png" class="attachment-relatedimg wp-post-image" alt="aleistercrowley4" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/bible-focus/the-3-youtube-videos-that-changed-my-outlook-forever/" rel="bookmark" title="The 3 YouTube videos that changed my outlook forever">The 3 YouTube videos that changed my outlook forever</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/bible-focus/scripture-teaching-a-chicken-latin/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2011/07/bible-reading-guy-782907121-150x125.jpg" class="attachment-relatedimg wp-post-image" alt="bible-reading-guy-78290712" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/bible-focus/scripture-teaching-a-chicken-latin/" rel="bookmark" title="Scripture: teaching a chicken latin">Scripture: teaching a chicken latin</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/bible-focus/men-and-women-worlds-longest-wrestling-match/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2011/07/Adam_and_Eve-150x125.jpg" class="attachment-relatedimg wp-post-image" alt="Adam_and_Eve" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/bible-focus/men-and-women-worlds-longest-wrestling-match/" rel="bookmark" title="Men and women: worlds longest wrestling match">Men and women: worlds longest wrestling match</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/bible-focus/the-bible-is-not-boring/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2011/01/john-piper-150x125.jpg" class="attachment-relatedimg wp-post-image" alt="john-piper" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/bible-focus/the-bible-is-not-boring/" rel="bookmark" title="The Bible is NOT Boring">The Bible is NOT Boring</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/news/hear/just-dont-listen/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/12/not_listening-150x125.png" class="attachment-relatedimg wp-post-image" alt="not_listening" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/news/hear/just-dont-listen/" rel="bookmark" title="Often times, we dont listen: A brief parable">Often times, we dont listen: A brief parable</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/bible-focus/follow-your-heart/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/10/follow_your_heart-150x125.png" class="attachment-relatedimg wp-post-image" alt="follow_your_heart" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/bible-focus/follow-your-heart/" rel="bookmark" title="Dissecting the phrase: &#8220;Follow Your Heart&#8221;">Dissecting the phrase: &#8220;Follow Your Heart&#8221;</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/thinking/its-not-about-the-shirt/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/08/che1-150x125.png" class="attachment-relatedimg wp-post-image" alt="che" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/thinking/its-not-about-the-shirt/" rel="bookmark" title="It&#8217;s Not About the Shirt">It&#8217;s Not About the Shirt</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/bible-focus/attention-span/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/08/freakout-150x125.png" class="attachment-relatedimg wp-post-image" alt="freakout" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/bible-focus/attention-span/" rel="bookmark" title="How long is your attention span?">How long is your attention span?</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+
+</div> <div id="cb"></div>
+ 	
+		
+<!-- You can start editing here. --> 
+<div class="comments-box"> <a name="comments" id="comments"></a>
+  
+  	<div id="displaying">Displaying 4 Comments  </div>
+                       
+                       	<div id="haveyoursay">Have Your Say  </div>
+                       	<br />
+  <ol class="commentlist">
+    		<li class="comment even thread-even depth-1" id="comment-95">
+				<div id="div-comment-95" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' />		<cite class="fn">Carl</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/bible-focus/gay-lifestyles-acceptance-and-awareness/#comment-95">
+			January 23, 2011 at 4:41 am</a>		</div>
+
+		<p>This is frustrating for many reasons. </p>
+<p>First of all, lets pretend that religion has any place in the class room in a public school. Who are YOU to determine that YOUR religion should be what is taught? So, if we&#39;re being fair then we need to remove everything from the classroom that goes against any religion&#39;s teaching. Lets stop teaching teens about safe sex &#8212; actually lets stop teaching sex ed altogether. Who cares if they contract STD&#39;s experimenting&#8230; The bible says you shouldn&#39;t fornicate, so we won&#39;t teach them about it because we&#39;re scared for them to think its ok. Let&#39;s stop teaching the sciences &#8212; all of them; because they help people who try to prove there isn&#39;t really a God. After all, the bible says that the reason we have the rainbow is because of a promise to Noah, so we can&#39;t have them learning about prisms. Who needs to learn about the &quot;big bang&quot; when we&#39;ve got creation stories? Hot dogs for lunch? That&#39;s out. We need to make sure each school lunch is kosher, AND doesn&#39;t contain pork (no jello, sorry kids&#8230;). Actually, we probably should do away with meat altogether, because killing animals is against a couple of faiths. No dancing, that&#39;s wrong too. I mean&#8230; we can&#39;t stop at homosexuality if we want to keep our kids pure! SIn is sin! I could go on&#8230; I could think of a million other RULES that should be in place to insure everyone and every religion is equally represented in public schools because no just Christians go there&#8230; but you can already see how RIDICULOUS this is.</p>
+<p>I think if you want your child taught in accordance with Christian tradition you need to do it at home or enroll them in a school where that is the curriculum. Some people would like their kids to be educated and well rounded. Some people don&#39;t mind their children being accepting and tolerant of others and their way of life. </p>
+<p>Teaching kids to accept something doesn&#39;t make it automatically an OPTION for them. I was never, ever, EVER taught to ACCEPT homosexuality. It didn&#39;t make me ANY LESS GAY. I&#39;ve been gay for my entire life, and regardless of what ANYONE wants to say&#8230; It wasn&#39;t a choice. All the &quot;shielding&quot; my parents did&#8230; all that did was make me hate people. And myself. It lead to confusion, depression, and suicidal thoughts. And school? Where kids weren&#39;t taught anything about sexuality or alternative lifestyles in the 90&#39;s? Oh, that was worst than any punishment. Just imagine being the &quot;gay&quot; kid in class. And you&#39;re 7. And you have no concept of what GAY is or anything else is. You just know that when kids want to hurt your feelings they call you &quot;faggot&quot; or &quot;queer&quot; or &quot;gay&quot;. Just imagine not having any guy friends because their scared to be your friend because they think you&#39;ve got some kind of &quot;gay&quot; disease that they are going to catch just by asking you to be on their team during kickball&#8230;. Imagine hearing a dad tell their son to STAY AWAY from that gay kid, at 8 years old, while you&#39;re outside having a water gun fight with the neighborhood kids (that parent soon met my stepdad, and he was taught to keep his comments to himself after that&#8230;I digress). Kids put me through HELL. I was miserable for a very long time, and thought of ending my life FREQUENTLY. But you know what I don&#39;t blame any of those kids. I blame the parents who taught them HATE and ignorance instead of tolerance and love for people, not what they are doing, but for them as an individual. I blame the school systems who taught hetero-normative curriculum instead of presenting other ways of life. These kids had NO CONCEPT of what being gay meant, but because I didn&#39;t act like all the other boys I was gay and that was the worst thing anyone could POSSIBLY be. No child deserves the torment I went through. But sadly I know some people have it a lot worse. My story isn&#39;t an extreme, its the norm. We can&#39;t pretend we don&#39;t know any more. We can&#39;t pretend that we&#39;re just protecting our kids anymore. You watch the news, you see the alarming rate of teen suicide. Do we not have any responsibility to them? Or is the world better for having one less gay in it? Since homosexuality is the worst thing in the world. </p>
+<p>I have a 5 year old nephew and you know what he hates? Naps. and broccoli. His current likes are spiderman, the color yellow and &quot;crabby patties&quot;(aka cheeseburgers). and if I have it my way he&#39;ll never hate anything or anyone else. He&#39;ll understand Christian teachings and right from wrong. But he&#39;ll also understand that people are different and that we all don&#39;t live the same way but that doesn&#39;t mean they don&#39;t have the right to exist as they choose. I&#39;m pretty sure teaching him about uncle Carl and whoever uncle Carl&#39;s boyfriend is at the time (in a manner that is appropriate for his age) won&#39;t make him gay but it WILL stop him from being one of the bullies or bigots in the classroom. </p>
+<p>I&#39;m not attacking you. I understand your point of view. but the very RIGHT you have to express that point of view and the lifestyle that you have is the same way other people&#39;s point of views and lifestyle should be expressed and heard as well.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/bible-focus/gay-lifestyles-acceptance-and-awareness/?replytocom=95#respond' onclick='return addComment.moveForm("div-comment-95", "95", "respond", "129")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-96">
+				<div id="div-comment-96" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' />		<cite class="fn">Donald John</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/bible-focus/gay-lifestyles-acceptance-and-awareness/#comment-96">
+			January 23, 2011 at 7:54 am</a>		</div>
+
+		<p>Going through the article i linked will help you out a bit on the issue with the school system.</p>
+<p><b>Heres the situation: </b><br />The father wanted to have his daughter excused because he felt the school&#39;s angle portrayed a gay lifestyle as ok or morally right. He went to do so, but the school denied him because it felt that having his daughter exit at that time would discriminate against any kids in the class who are or know homosexuals. They all went to court and the court backed the school and now the ruling is that kids must be taught about homosexual relationships (this is an elementary school) from the school&#39;s perspective. </p>
+<p>The title of this article features <b>&quot;Acceptance and Awareness&quot;</b>. We were taught about the civil rights period here in America. We were made AWARE of the KKK and MLK (purely of their existence). The important part is that the teaching didn&#39;t stop there. We were taught in a way which made KKK = BAD and MLK = GOOD. Homosexuality is a moral issue and good and bad are on the table. It&#39;s either ok or not ok. The school has made their choice to present it as an ok way of life by denying children to be excused in fear it might make other kids see gay lifestyles as having something wrong with them. </p>
+<p>You know that scripture does not teach us to poke fun at or hate people who consider themselves gay. I&#39;m sorry to hear those things happened to you &#8211; their actions don&#39;t line up with Christian teaching. On homosexuality in general, you really have to go to God. Argue with His word, not with bloggers. Romans 1 stands and they aren&#39;t my words. </p>
+<p>It&#39;s good not to teach your nephew not to bully. I&#39;m not one either. I&#39;ll say the same thing I said before:<br />If you are a Christian, and a practicing homosexual, now is the time to go to biblical truth. Do not delay. Do not seek those who will tell you what you want to here. <b>You are not alone, all temptations are common to all men. You are not a sore thumb, </b> however, you need to cling to God&#39;s truth and hold to it with more force than your pride, temptation, or sexual identity.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/bible-focus/gay-lifestyles-acceptance-and-awareness/?replytocom=96#respond' onclick='return addComment.moveForm("div-comment-96", "96", "respond", "129")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-97">
+				<div id="div-comment-97" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' />		<cite class="fn">Ben</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/bible-focus/gay-lifestyles-acceptance-and-awareness/#comment-97">
+			January 26, 2011 at 8:00 pm</a>		</div>
+
+		<p>First let me begin by saying that only in America can we have this type of debate on this type of issue. I love being an American.</p>
+<p>Now as a Christian I fully believe that homosexuality is a sin as stated in the bible. It&#39;s very clearly stated “Do not practice homosexuality, having sex with another man as with a woman. It is a detestable sin.&quot; Leviticus 18:22 so I agree with you Donald. However, also as a Christian we are taught to love one another. So, I am truly sorry to hear what happened to you Carl. Unfortunately, your story is the NORM and it shouldn&#39;t be. There is NO excuse for discrimination PERIOD. This is why I can understand what the school system is trying to accomplish by introducing homosexuality in schools. I have two small children and we teach understanding in our house. To love others and understand them although they may be different. My husband and I have thought and thought about when we should introduce the topic of homosexuality to our oldest (7 years old in the 2nd grade). I&#39;ve always just been unsure of how to begin. She is totally unaware of homosexuality because it just so happens that I don&#39;t have any close homosexual friends or family members. However, I&#39;d like to broach the subject before it takes her by surprise. I&#39;m rambling&#8230;.<br />My point is like all things (including religion) homosexuality should be taught in the home FIRST. Parents can express their views on the subject and teach their beliefs. This way when a child comes across the situation later, they are able to deal with it without confusion (which can lead to misunderstanding and violence). I feel the same way about heterosexuality. My parents never told me anything about sex. Thank God I learned about my menstrual cycle in school. In schools, sex ed can only be taught with consent given from home. So if they can&#39;t get it at school and Mom and Dad (or whoever) is not giving them the information at home where are they getting it???? As a nurse, I am responsible for giving out condoms in high school. No questions asked. It always bothers me that the school is responsible for that. What the heck are parents doing????? Seriously!!!! Wake up and parent!!! Everything your child needs to know should be taught at home. They must be equipped with all the knowledge and spiritual armor they can hold to face the challenges of today&#39;s world. Again, I&#39;m rambling&#8230;<br />I said all of that to say this. I don&#39;t agree that it should be introduced as an alternative lifestyle. The book about the 2 princes getting married is inappropriate for 2nd graders and will only confuse them. I feel the same way about the creation theory being taught in class. Perhaps if more tolerance and understanding were taught in schools none of this would be necessary. There are gay teachers, principals and students in every school just as there are girls, boys, and various ethnic groups. Our children must learn to be respectful of all people despite their differences. However, this must first begin at home not in school.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/bible-focus/gay-lifestyles-acceptance-and-awareness/?replytocom=97#respond' onclick='return addComment.moveForm("div-comment-97", "97", "respond", "129")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-110">
+				<div id="div-comment-110" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://1.gravatar.com/avatar/7c19ecd23b2cee7f90fa1554cafec09b?s=40&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' />		<cite class="fn"><a onclick="javascript:_gaq.push(['_trackPageview', '/out/YourWebsite...']);"  href='http://YourWebsite...' rel='external nofollow' class='url'>Brandi</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/bible-focus/gay-lifestyles-acceptance-and-awareness/#comment-110">
+			July 12, 2011 at 1:12 pm</a>		</div>
+
+		<p>I find it kind of funny that people don&#8217;t take the Bible for face value. There is no &#8220;skewed interpretation&#8221; or subjectivity about it. If you are a Christian then you know homosexuality is against God and the morals and values for which He stands. There is no loaded language, blah blah blaaaaaaaaahhhhhh&#8230;It&#8217;s in the Bible, plain and simple&#8230;pick it up one day, read, it&#8217;s fundamental. I ALSO believe that no one has the right to judge having said that, what you do, you&#8217;ll answer for, but the Bible is very clear and exact.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/bible-focus/gay-lifestyles-acceptance-and-awareness/?replytocom=110#respond' onclick='return addComment.moveForm("div-comment-110", "110", "respond", "129")'>Reply</a>		</div>
+				</div>
+		</li>
+
+  </ol>
+  <div class="navigation">
+    <div class="left">
+      
+    </div>
+    <div class="right">
+      
+    </div>
+  </div>
+  
+     	 
+  <div id="respond">     
+    <h2>Leave a comment</h2>
+    <div class="cancel-comment-reply"> <small>
+      <a rel="nofollow" id="cancel-comment-reply-link" href="/bible-focus/gay-lifestyles-acceptance-and-awareness/#respond" style="display:none;">Click here to cancel reply.</a>
+      </small> </div>
+    
+    <form action="http://mylymbo.com/wp-comments-post.php" method="post" id="commentform">
+      
+      <p>
+        <input class="author" type="text" value="Your Name..." onclick="this.value='';" name="author" id="author" size="22" tabindex="1"/>
+        <label for="author"><small>
+        (Required)
+        </small></label>
+      </p>
+      <p>
+        <input class="email" type="text" value="Your Email..." onclick="this.value='';" name="email" id="email" size="22" tabindex="2"/>
+        <label for="email"><small>(Will not be published)
+         (Required)
+        </small></label>
+      </p>
+      <p>
+        <input class="url" type="text" value="Your Website..." onclick="this.value='';" name="url" id="url" size="22" tabindex="3"/>
+        <label for="url"><small>(Optional)</small></label>
+      </p>
+      
+
+      <p>
+        <textarea name="comment" id="comment" tabindex="4"></textarea>
+      </p>
+           <p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>
+      <p>
+        <input class="submit" name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+        <input type='hidden' name='comment_post_ID' value='129' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+
+      </p>
+      <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="f0a2ac14e4" /></p>                <script type='text/javascript'>
+                    var RecaptchaOptions = { theme : 'red', lang : 'en' , tabindex : 5 };
+                </script><script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=6LeE4McSAAAAAJrYqQUpwDCvaqLY-sPZEeG_nQXy"></script>
+
+	<noscript>
+  		<iframe src="http://www.google.com/recaptcha/api/noscript?k=6LeE4McSAAAAAJrYqQUpwDCvaqLY-sPZEeG_nQXy" height="300" width="500" frameborder="0"></iframe><br/>
+  		<textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+  		<input type="hidden" name="recaptcha_response_field" value="manual_challenge"/>
+	</noscript>                        <div id="recaptcha-submit-btn-area">&nbsp;</div>
+                        <noscript>
+                         <style type='text/css'>#submit {display:none;}</style>
+                         <input name="submit" type="submit" id="submit-alt" tabindex="6" value="Submit Comment"/> 
+                        </noscript><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p>
+    </form>
+    
+  </div>
+  
+</div>
+
+
+ </div>  
+     </div><!-- end #content -->
+
+    <aside>
+
+   
+ 
+		    	 <div class="fsearchbg"> 
+
+      	<form method="get" id="footersearch" action="http://mylymbo.com/">
+
+			           <input type="text" name="s" value="Search News - Enter Keyword" onblur="if(this.value=='') this.value='Search News - Enter Keyword';" onfocus="if(this.value=='Search News - Enter Keyword') this.value='';" id="s" />
+
+			<input type="submit" value=" " id="searchsubmit" />
+
+		   </form> 
+
+       </div>
+
+		  
+<div id="mrtindiva">
+
+
+	  
+<ul class="tabs">
+    <li><a href="#tab1">Comments</a></li>
+    <li><a href="#tab2">Topics</a></li>
+        <li><a href="#tab3">Tags</a></li>
+</ul>
+
+<div class="tab_container">
+    <div id="tab1" class="tab_content">
+      
+ 
+<li class="">Donald John on <a href="http://mylymbo.com/react/the-deceived-noble-soldier/#comment-183">The Deceived Noble Soldier</a></li><li class="">Donald John on <a href="http://mylymbo.com/react/the-deceived-noble-soldier/#comment-118">The Deceived Noble Soldier</a></li><li class=""><a onclick="javascript:_gaq.push(['_trackPageview', '/out/YourWebsite...']);"  href='http://YourWebsite...' rel='external nofollow' class='url'>What</a> on <a href="http://mylymbo.com/react/the-deceived-noble-soldier/#comment-117">The Deceived Noble Soldier</a></li><li class=""><a onclick="javascript:_gaq.push(['_trackPageview', '/out/YourWebsite...']);"  href='http://YourWebsite...' rel='external nofollow' class='url'>Ben</a> on <a href="http://mylymbo.com/react/the-deceived-noble-soldier/#comment-115">The Deceived Noble Soldier</a></li><li class=""><a onclick="javascript:_gaq.push(['_trackPageview', '/out/YourWebsite...']);"  href='http://YourWebsite...' rel='external nofollow' class='url'>Ben</a> on <a href="http://mylymbo.com/bible-focus/are-you-eating-every-day/#comment-114">Are you eating every day?</a></li> 
+    </div>
+    <div id="tab2" class="tab_content">
+      
+      <div class="section widget_categories2">
+		 
+			<ul>
+					<li class="cat-item cat-item-3"><a href="http://mylymbo.com/category/bible-focus/" title="View all posts filed under Bible Focus">Bible Focus</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://mylymbo.com/category/featured/" title="View all posts filed under Featured">Featured</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://mylymbo.com/category/feel/" title="View all posts filed under Feel">Feel</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://mylymbo.com/category/feeling/" title="View all posts filed under feeling">feeling</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://mylymbo.com/category/news/hear/" title="View all posts filed under Hear">Hear</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://mylymbo.com/category/ml-boxing/" title="View all posts filed under ML Boxing">ML Boxing</a>
+</li>
+	<li class="cat-item cat-item-102"><a href="http://mylymbo.com/category/bible-focus/ml-nightlight/" title="Brief, concise, clear, readings of the word of God. I can&#039;t think of any better way to get centered around God&#039;s word than to read it and digest it.">ML Night Light</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://mylymbo.com/category/news/" title="View all posts filed under News">News</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://mylymbo.com/category/react/" title="View all posts filed under React">React</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://mylymbo.com/category/reacting/" title="View all posts filed under reacting">reacting</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://mylymbo.com/category/thinking/" title="View all posts filed under thinking">thinking</a>
+</li>
+ 
+			</ul>
+		</div>
+       
+    </div>
+     <div id="tab3" class="tab_content">
+   <a href='http://mylymbo.com/tag/apple/' class='tag-link-13' title='1 topic' style='font-size: 8pt;'>apple</a>
+<a href='http://mylymbo.com/tag/attention/' class='tag-link-14' title='1 topic' style='font-size: 8pt;'>attention</a>
+<a href='http://mylymbo.com/tag/authority/' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>authority</a>
+<a href='http://mylymbo.com/tag/bad/' class='tag-link-16' title='1 topic' style='font-size: 8pt;'>bad</a>
+<a href='http://mylymbo.com/tag/battle/' class='tag-link-17' title='1 topic' style='font-size: 8pt;'>battle</a>
+<a href='http://mylymbo.com/tag/battleground/' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>battleground</a>
+<a href='http://mylymbo.com/tag/belief/' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>belief</a>
+<a href='http://mylymbo.com/tag/bible/' class='tag-link-20' title='2 topics' style='font-size: 14.3pt;'>bible</a>
+<a href='http://mylymbo.com/tag/break/' class='tag-link-21' title='1 topic' style='font-size: 8pt;'>break</a>
+<a href='http://mylymbo.com/tag/charity/' class='tag-link-22' title='1 topic' style='font-size: 8pt;'>charity</a>
+<a href='http://mylymbo.com/tag/che-guevara/' class='tag-link-23' title='1 topic' style='font-size: 8pt;'>che guevara</a>
+<a href='http://mylymbo.com/tag/children/' class='tag-link-24' title='1 topic' style='font-size: 8pt;'>children</a>
+<a href='http://mylymbo.com/tag/chris-brown/' class='tag-link-25' title='1 topic' style='font-size: 8pt;'>chris brown</a>
+<a href='http://mylymbo.com/tag/christ/' class='tag-link-26' title='1 topic' style='font-size: 8pt;'>Christ</a>
+<a href='http://mylymbo.com/tag/courage/' class='tag-link-27' title='1 topic' style='font-size: 8pt;'>courage</a>
+<a href='http://mylymbo.com/tag/cursing/' class='tag-link-28' title='1 topic' style='font-size: 8pt;'>cursing</a>
+<a href='http://mylymbo.com/tag/destiny/' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>destiny</a>
+<a href='http://mylymbo.com/tag/encouragement/' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>encouragement</a>
+<a href='http://mylymbo.com/tag/existence/' class='tag-link-31' title='1 topic' style='font-size: 8pt;'>existence</a>
+<a href='http://mylymbo.com/tag/faith/' class='tag-link-32' title='3 topics' style='font-size: 18.5pt;'>faith</a>
+<a href='http://mylymbo.com/tag/focus/' class='tag-link-33' title='1 topic' style='font-size: 8pt;'>focus</a>
+<a href='http://mylymbo.com/tag/follow/' class='tag-link-34' title='1 topic' style='font-size: 8pt;'>follow</a>
+<a href='http://mylymbo.com/tag/friends/' class='tag-link-35' title='1 topic' style='font-size: 8pt;'>friends</a>
+<a href='http://mylymbo.com/tag/friendship/' class='tag-link-36' title='1 topic' style='font-size: 8pt;'>friendship</a>
+<a href='http://mylymbo.com/tag/gay/' class='tag-link-37' title='1 topic' style='font-size: 8pt;'>gay</a>
+<a href='http://mylymbo.com/tag/god/' class='tag-link-38' title='3 topics' style='font-size: 18.5pt;'>God</a>
+<a href='http://mylymbo.com/tag/graduation/' class='tag-link-39' title='1 topic' style='font-size: 8pt;'>graduation</a>
+<a href='http://mylymbo.com/tag/guidance/' class='tag-link-40' title='1 topic' style='font-size: 8pt;'>guidance</a>
+<a href='http://mylymbo.com/tag/heart/' class='tag-link-41' title='3 topics' style='font-size: 18.5pt;'>heart</a>
+<a href='http://mylymbo.com/tag/heaven/' class='tag-link-42' title='1 topic' style='font-size: 8pt;'>heaven</a>
+<a href='http://mylymbo.com/tag/holy/' class='tag-link-43' title='1 topic' style='font-size: 8pt;'>holy</a>
+<a href='http://mylymbo.com/tag/homosexuality/' class='tag-link-44' title='1 topic' style='font-size: 8pt;'>homosexuality</a>
+<a href='http://mylymbo.com/tag/idol/' class='tag-link-45' title='1 topic' style='font-size: 8pt;'>idol</a>
+<a href='http://mylymbo.com/tag/jesus/' class='tag-link-46' title='4 topics' style='font-size: 22pt;'>Jesus</a>
+<a href='http://mylymbo.com/tag/judgement/' class='tag-link-47' title='2 topics' style='font-size: 14.3pt;'>judgement</a>
+<a href='http://mylymbo.com/tag/language/' class='tag-link-48' title='1 topic' style='font-size: 8pt;'>language</a>
+<a href='http://mylymbo.com/tag/life/' class='tag-link-49' title='1 topic' style='font-size: 8pt;'>life</a>
+<a href='http://mylymbo.com/tag/love/' class='tag-link-51' title='2 topics' style='font-size: 14.3pt;'>love</a>
+<a href='http://mylymbo.com/tag/music/' class='tag-link-89' title='2 topics' style='font-size: 14.3pt;'>music</a>
+<a href='http://mylymbo.com/tag/relationship/' class='tag-link-97' title='2 topics' style='font-size: 14.3pt;'>relationship</a>
+<a href='http://mylymbo.com/tag/school/' class='tag-link-68' title='2 topics' style='font-size: 14.3pt;'>school</a>
+<a href='http://mylymbo.com/tag/scripture/' class='tag-link-100' title='2 topics' style='font-size: 14.3pt;'>scripture</a>
+<a href='http://mylymbo.com/tag/truth/' class='tag-link-79' title='2 topics' style='font-size: 14.3pt;'>truth</a>
+<a href='http://mylymbo.com/tag/women/' class='tag-link-91' title='2 topics' style='font-size: 14.3pt;'>women</a>
+<a href='http://mylymbo.com/tag/words/' class='tag-link-85' title='2 topics' style='font-size: 14.3pt;'>words</a>
+    </div>
+</div> </div>
+			<div id="sidebar">
+
+<div class="section widget_mailchimpsf_widget"><div id="sidebartitlewrapper"><h3>Sign up for the ML Box-Plot</h3></div><div class="sectioncont">	
+<div id="mc_signup">
+	<form method="post" action="#mc_signup" id="mc_signup_form">
+		<input type="hidden" id="mc_submit_type" name="mc_submit_type" value="html" />
+		<input type="hidden" name="mcsf_action" value="mc_submit_signup_form" />
+		<input type="hidden" id="_mc_submit_signup_form_nonce" name="_mc_submit_signup_form_nonce" value="88fe4908e4" />		
+		
+	<div class="mc_form_inside">
+		
+		<div class="updated" id="mc_message">
+					</div><!-- /mc_message -->
+
+		
+<div class="mc_merge_var">
+		<label for="mc_mv_EMAIL" class="mc_var_label">Email Address<span class="mc_required">*</span></label>
+	<input type="text" size="18" value="" name="mc_mv_EMAIL" id="mc_mv_EMAIL" class="mc_input"/>
+</div><!-- /mc_merge_var -->
+<div class="mc_merge_var">
+		<label for="mc_mv_FNAME" class="mc_var_label">First Name</label>
+	<input type="text" size="18" value="" name="mc_mv_FNAME" id="mc_mv_FNAME" class="mc_input"/>
+</div><!-- /mc_merge_var -->
+<div class="mc_merge_var">
+		<label for="mc_mv_LNAME" class="mc_var_label">Last Name</label>
+	<input type="text" size="18" value="" name="mc_mv_LNAME" id="mc_mv_LNAME" class="mc_input"/>
+</div><!-- /mc_merge_var -->			<div id="mc-indicates-required">
+				* = required field			</div><!-- /mc-indicates-required -->
+			
+		<div class="mc_signup_submit">
+			<input type="submit" name="mc_signup_submit" id="mc_signup_submit" value="Subscribe" class="button" />
+		</div><!-- /mc_signup_submit -->
+	
+	
+				
+	</div><!-- /mc_form_inside -->
+	</form><!-- /mc_signup_form -->
+</div><!-- /mc_signup_container -->
+	</div></div><div class="section widget_tag_cloud"><div id="sidebartitlewrapper"><h3>Tags</h3></div><div class="sectioncont"><div class="tagcloud"><a href='http://mylymbo.com/tag/apple/' class='tag-link-13' title='1 topic' style='font-size: 8pt;'>apple</a>
+<a href='http://mylymbo.com/tag/attention/' class='tag-link-14' title='1 topic' style='font-size: 8pt;'>attention</a>
+<a href='http://mylymbo.com/tag/authority/' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>authority</a>
+<a href='http://mylymbo.com/tag/bad/' class='tag-link-16' title='1 topic' style='font-size: 8pt;'>bad</a>
+<a href='http://mylymbo.com/tag/battle/' class='tag-link-17' title='1 topic' style='font-size: 8pt;'>battle</a>
+<a href='http://mylymbo.com/tag/battleground/' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>battleground</a>
+<a href='http://mylymbo.com/tag/belief/' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>belief</a>
+<a href='http://mylymbo.com/tag/bible/' class='tag-link-20' title='2 topics' style='font-size: 14.3pt;'>bible</a>
+<a href='http://mylymbo.com/tag/break/' class='tag-link-21' title='1 topic' style='font-size: 8pt;'>break</a>
+<a href='http://mylymbo.com/tag/charity/' class='tag-link-22' title='1 topic' style='font-size: 8pt;'>charity</a>
+<a href='http://mylymbo.com/tag/che-guevara/' class='tag-link-23' title='1 topic' style='font-size: 8pt;'>che guevara</a>
+<a href='http://mylymbo.com/tag/children/' class='tag-link-24' title='1 topic' style='font-size: 8pt;'>children</a>
+<a href='http://mylymbo.com/tag/chris-brown/' class='tag-link-25' title='1 topic' style='font-size: 8pt;'>chris brown</a>
+<a href='http://mylymbo.com/tag/christ/' class='tag-link-26' title='1 topic' style='font-size: 8pt;'>Christ</a>
+<a href='http://mylymbo.com/tag/courage/' class='tag-link-27' title='1 topic' style='font-size: 8pt;'>courage</a>
+<a href='http://mylymbo.com/tag/cursing/' class='tag-link-28' title='1 topic' style='font-size: 8pt;'>cursing</a>
+<a href='http://mylymbo.com/tag/destiny/' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>destiny</a>
+<a href='http://mylymbo.com/tag/encouragement/' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>encouragement</a>
+<a href='http://mylymbo.com/tag/existence/' class='tag-link-31' title='1 topic' style='font-size: 8pt;'>existence</a>
+<a href='http://mylymbo.com/tag/faith/' class='tag-link-32' title='3 topics' style='font-size: 18.5pt;'>faith</a>
+<a href='http://mylymbo.com/tag/focus/' class='tag-link-33' title='1 topic' style='font-size: 8pt;'>focus</a>
+<a href='http://mylymbo.com/tag/follow/' class='tag-link-34' title='1 topic' style='font-size: 8pt;'>follow</a>
+<a href='http://mylymbo.com/tag/friends/' class='tag-link-35' title='1 topic' style='font-size: 8pt;'>friends</a>
+<a href='http://mylymbo.com/tag/friendship/' class='tag-link-36' title='1 topic' style='font-size: 8pt;'>friendship</a>
+<a href='http://mylymbo.com/tag/gay/' class='tag-link-37' title='1 topic' style='font-size: 8pt;'>gay</a>
+<a href='http://mylymbo.com/tag/god/' class='tag-link-38' title='3 topics' style='font-size: 18.5pt;'>God</a>
+<a href='http://mylymbo.com/tag/graduation/' class='tag-link-39' title='1 topic' style='font-size: 8pt;'>graduation</a>
+<a href='http://mylymbo.com/tag/guidance/' class='tag-link-40' title='1 topic' style='font-size: 8pt;'>guidance</a>
+<a href='http://mylymbo.com/tag/heart/' class='tag-link-41' title='3 topics' style='font-size: 18.5pt;'>heart</a>
+<a href='http://mylymbo.com/tag/heaven/' class='tag-link-42' title='1 topic' style='font-size: 8pt;'>heaven</a>
+<a href='http://mylymbo.com/tag/holy/' class='tag-link-43' title='1 topic' style='font-size: 8pt;'>holy</a>
+<a href='http://mylymbo.com/tag/homosexuality/' class='tag-link-44' title='1 topic' style='font-size: 8pt;'>homosexuality</a>
+<a href='http://mylymbo.com/tag/idol/' class='tag-link-45' title='1 topic' style='font-size: 8pt;'>idol</a>
+<a href='http://mylymbo.com/tag/jesus/' class='tag-link-46' title='4 topics' style='font-size: 22pt;'>Jesus</a>
+<a href='http://mylymbo.com/tag/judgement/' class='tag-link-47' title='2 topics' style='font-size: 14.3pt;'>judgement</a>
+<a href='http://mylymbo.com/tag/language/' class='tag-link-48' title='1 topic' style='font-size: 8pt;'>language</a>
+<a href='http://mylymbo.com/tag/life/' class='tag-link-49' title='1 topic' style='font-size: 8pt;'>life</a>
+<a href='http://mylymbo.com/tag/love/' class='tag-link-51' title='2 topics' style='font-size: 14.3pt;'>love</a>
+<a href='http://mylymbo.com/tag/music/' class='tag-link-89' title='2 topics' style='font-size: 14.3pt;'>music</a>
+<a href='http://mylymbo.com/tag/relationship/' class='tag-link-97' title='2 topics' style='font-size: 14.3pt;'>relationship</a>
+<a href='http://mylymbo.com/tag/school/' class='tag-link-68' title='2 topics' style='font-size: 14.3pt;'>school</a>
+<a href='http://mylymbo.com/tag/scripture/' class='tag-link-100' title='2 topics' style='font-size: 14.3pt;'>scripture</a>
+<a href='http://mylymbo.com/tag/truth/' class='tag-link-79' title='2 topics' style='font-size: 14.3pt;'>truth</a>
+<a href='http://mylymbo.com/tag/women/' class='tag-link-91' title='2 topics' style='font-size: 14.3pt;'>women</a>
+<a href='http://mylymbo.com/tag/words/' class='tag-link-85' title='2 topics' style='font-size: 14.3pt;'>words</a></div>
+</div></div>
+
+			</div><!-- end #r-sidebar -->
+
+		</aside>  
+</section>
+</div>
+<!-- #wrapper -->
+
+<footer>
+<div id="footer1">
+  <div id="footerwrapper1">
+    <div id="fsidebar1">
+      <div class="widget"><ul><h3>Categories</h3>		<ul>
+	<li class="cat-item cat-item-3"><a href="http://mylymbo.com/category/bible-focus/" title="View all posts filed under Bible Focus">Bible Focus</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://mylymbo.com/category/featured/" title="View all posts filed under Featured">Featured</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://mylymbo.com/category/feel/" title="View all posts filed under Feel">Feel</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://mylymbo.com/category/feeling/" title="View all posts filed under feeling">feeling</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://mylymbo.com/category/news/hear/" title="View all posts filed under Hear">Hear</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://mylymbo.com/category/ml-boxing/" title="View all posts filed under ML Boxing">ML Boxing</a>
+</li>
+	<li class="cat-item cat-item-102"><a href="http://mylymbo.com/category/bible-focus/ml-nightlight/" title="Brief, concise, clear, readings of the word of God. I can&#039;t think of any better way to get centered around God&#039;s word than to read it and digest it.">ML Night Light</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://mylymbo.com/category/news/" title="View all posts filed under News">News</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://mylymbo.com/category/react/" title="View all posts filed under React">React</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://mylymbo.com/category/reacting/" title="View all posts filed under reacting">reacting</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://mylymbo.com/category/thinking/" title="View all posts filed under thinking">thinking</a>
+</li>
+		</ul>
+</ul></div>    </div>
+    <div id="fsidebar2">
+      <div class="widget"><ul><h3>Blogroll</h3>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.desiringGod.org" title="Site covering the ministry of John Piper. ">Desiring God</a></li>
+<li><a href="http://www.heartcrymissionary.com" title="A mission founded by preacher, Paul Washer. ">HeartCry Missionary Society</a></li>
+<li><a href="http://www.illbehonest.com" title="Great for videos on sound doctrine and preaching. ">I&#039;ll Be Honest</a></li>
+<li><a href="http://www.lanechaplain.com" title="Good source of current news and interviews with reformed believers. ">Lane Chaplain</a></li>
+<li><a href="http://www.thegospelcoalition.org" title="Team of pastors come together to magnify sound doctrine. ">The Gospel Coalition</a></li>
+
+	</ul>
+</ul></div>
+    </div>
+    <div id="fsidebar3">
+      <div class="widget"><ul><h3>Meta</h3>			<ul>
+						<li><a href="http://mylymbo.com/wp-login.php">Log in</a></li>
+			<li><a href="http://mylymbo.com/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://mylymbo.com/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+						</ul>
+</ul></div>    </div>
+    <div id="fsidebar4">
+      <!--
+      <div class="widget">
+        <ul>
+          <h3>About Our Site</h3>
+          <ul>
+                                                          </ul>
+        </ul>
+      </div>
+      -->
+    </div>
+    <div style="clear: both;"> </div>
+  </div>
+</div>
+<div id="footer2">
+<div id="footerwrapper2">
+  <div id="fotnav">
+    <ul id="fnav">
+      <center>
+              </center>
+    </ul>
+  </div>
+  <div id="fotbot">
+    <div class="fotlogoleft">
+      <div class="fotcopy"> &copy; 2010  - All Rights Reserved </div>
+    </div>
+    <div class="fotlogoright">
+      <ul id="skyline">
+        <li id="pad1"> <a href="http://www.facebook.com/pages/MyLymbocom/237638213205"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/fot-fb.png" alt="Become a Fan!" /></a></li>
+        <li id="pad1"> <a href="http://twitter.com/mylymbo"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/fot-twitter.png" alt="Follow On Twitter" /></a></li>
+        <li id="pad1"> <a href="http://mylymbo.com/?feed=atom"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/fot-feed.png" alt="Subcribe to Our RSS Feed" /></a></li>
+        <li>
+          <form method="get" id="footersearch" action="http://mylymbo.com/">
+            <input type="text" name="s" value="Search News - Enter Keyword" onblur="if(this.value=='') this.value='Search News - Enter Keyword';" onfocus="if(this.value=='Search News - Enter Keyword') this.value='';" id="s" />
+            <input type="submit" value=" " id="searchsubmit" />
+          </form>
+        </li>
+      </ul>
+    </div>
+    <div id="cb"></div>
+  </div>
+</div>
+</footer>
+<script src="http://bible.logos.com/jsapi/Referencetagging.js" type="text/javascript"></script>
+<script type="text/javascript">
+			Logos.ReferenceTagging.lbsBibleVersion = "ESV";
+			Logos.ReferenceTagging.lbsLibronixBibleVersion = "ESV";
+									Logos.ReferenceTagging.lbsLibronixLinkIcon = "dark";
+									Logos.ReferenceTagging.lbsNoSearchTagNames = [ "h1", "h2", "h3" ];
+															Logos.ReferenceTagging.tag();
+		</script>
+
+<!-- Google Analytics Code added by Web Ninja Google Analytics plugin v1.0.7: http://josh-fowler.com/?page_id=70 -->
+<script type='text/javascript'>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXX-X']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- Web Ninja Google Analytics Done -->
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2013Maraa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://mylymbo.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=3.5.1'></script>
+	<div style="display:none">
+	<div class="grofile-hash-map-a078aefaace50a1f2ba7eddd3bbf3a25">
+	</div>
+	<div class="grofile-hash-map-d41d8cd98f00b204e9800998ecf8427e">
+	</div>
+	<div class="grofile-hash-map-7c19ecd23b2cee7f90fa1554cafec09b">
+	</div>
+	</div>
+                <script type="text/javascript">
+                var sub = document.getElementById('submit');
+                document.getElementById('recaptcha-submit-btn-area').appendChild (sub);
+                document.getElementById('submit').tabIndex = 6;
+                if ( typeof _recaptcha_wordpress_savedcomment != 'undefined') {
+                        document.getElementById('comment').value = _recaptcha_wordpress_savedcomment;
+                }
+                document.getElementById('recaptcha_table').style.direction = 'ltr';
+                </script><script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201313'></script>
+
+	<script src="http://stats.wordpress.com/e-201313.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:1.8.2',blog:'25034968',post:'129'});
+	var load_cmc = function(){linktracker_init(25034968,129,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script>
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Served from: mylymbo.com @ 2013-03-30 06:59:32 -->

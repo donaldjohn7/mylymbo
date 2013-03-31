@@ -1,0 +1,1619 @@
+ <!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+
+<head profile="http://gmpg.org/xfn/11">
+
+
+	<meta charset="UTF-8" />
+
+
+<title>All roads lead to&#8230; &#8211; MyLymbo</title> 
+
+
+<meta name="description" content="" />
+
+
+<meta name="keywords" content="" />
+
+
+	<link rel="stylesheet" href="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/style.css" type="text/css" media="screen" />
+
+
+    <link rel="shortcut icon" href="http://www.mylymbo.com/favicon.ico" />
+
+
+    <link rel="shortcut icon" href="http://www.mylymbo.com/favicon.ico" type="image/x-icon" />
+
+
+    <meta name="generator" content="Magazine3 Framework Version 3.0" />
+
+
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+
+	<link rel="alternate" type="application/rss+xml" title="MyLymbo RSS Feed" href="http://mylymbo.com/feed/" />
+
+
+	<link rel="pingback" href="http://mylymbo.com/xmlrpc.php" />
+
+
+	<script type="text/javascript" src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/js/jquery-1.4.4.min.js"></script>
+
+
+	<script type="text/javascript" src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/js/ddsmoothmenu.js"></script> 
+
+
+    <script type="text/javascript" src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/js/jquery.tools.min.js"></script>
+
+
+ <script type="text/javascript">
+
+
+var $ = jQuery.noConflict();
+
+
+$(document).ready(function() {
+
+
+
+
+
+	//When page loads...
+
+
+	$(".tab_content").hide(); //Hide all content
+
+
+	$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+
+
+	$(".tab_content:first").show(); //Show first tab content
+
+
+
+
+
+	//On Click Event
+
+
+	$("ul.tabs li").click(function() {
+
+
+
+
+
+		$("ul.tabs li").removeClass("active"); //Remove any "active" class
+
+
+		$(this).addClass("active"); //Add "active" class to selected tab
+
+
+		$(".tab_content").hide(); //Hide all tab content
+
+
+
+
+
+		var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+
+
+		$(activeTab).fadeIn(); //Fade in the active ID content
+
+
+		return false;
+
+
+	});
+
+
+
+
+
+});
+
+
+</script>
+
+
+ <script type="text/javascript">
+
+
+$(document).ready(function() {
+
+
+	//Tooltips
+
+
+	$(".tip_trigger").hover(function(){
+
+
+		tip = $(this).find('.tip');
+
+
+		tip.show(); //Show tooltip
+
+
+	}, function() {
+
+
+		tip.hide(); //Hide tooltip		  
+
+
+	}).mousemove(function(e) {
+
+
+		var mousex = e.pageX + 20; //Get X coodrinates
+
+
+		var mousey = e.pageY + 20; //Get Y coordinates
+
+
+		var tipWidth = tip.width(); //Find width of tooltip
+
+
+		var tipHeight = tip.height(); //Find height of tooltip
+
+
+		
+
+
+		//Distance of element from the right edge of viewport
+
+
+		var tipVisX = $(window).width() - (mousex + tipWidth);
+
+
+		//Distance of element from the bottom of viewport
+
+
+		var tipVisY = $(window).height() - (mousey + tipHeight);
+
+
+		  
+
+
+		if ( tipVisX < 20 ) { //If tooltip exceeds the X coordinate of viewport
+
+
+			mousex = e.pageX - tipWidth - 20;
+
+
+		} if ( tipVisY < 20 ) { //If tooltip exceeds the Y coordinate of viewport
+
+
+			mousey = e.pageY - tipHeight - 20;
+
+
+		} 
+
+
+		tip.css({  top: mousey, left: mousex });
+
+
+	});
+
+
+});
+
+
+
+
+
+</script>
+
+
+	 <script type="text/javascript">
+
+
+ $(document).ready(function() {
+
+
+
+
+
+ $("div.scrollable").scrollable({
+
+
+
+
+
+		size: 3,
+
+
+		items: '#thumbs',   
+
+
+		hoverClass: 'hover',
+
+
+		speed: 400,
+
+
+		keyboard: false,
+
+
+		clickable: false
+
+
+
+
+
+	}).navigator();	
+
+
+	  
+
+
+  		
+
+
+});
+
+
+</script>
+
+
+  
+
+
+ <script type="text/javascript">   
+
+
+
+
+
+  // when the DOM is ready...        
+
+
+
+
+
+$(document).ready(function () {      
+
+
+
+
+
+  // load the ticker                 
+
+
+
+
+
+	createTicker();                    
+
+
+
+
+
+});                                  
+
+
+
+
+
+function createTicker(){             
+
+
+
+
+
+	// put all list elements within #ticker-area into array   
+
+
+
+
+
+	var tickerLIs = $("#ticker-area ul").children();          
+
+
+
+
+
+	tickerItems = new Array();                                
+
+
+
+
+
+	tickerLIs.each(function(el) {                             
+
+
+
+
+
+		tickerItems.push( jQuery(this).html() );                
+
+
+
+
+
+	});                                                       
+
+
+
+
+
+	i = 0                                                     
+
+
+
+
+
+	rotateTicker();                                           
+
+
+
+
+
+}                                                           
+
+
+
+
+
+function rotateTicker(){                                    
+
+
+
+
+
+	if( i == tickerItems.length ){                            
+
+
+
+
+
+	  i = 0;                                                  
+
+
+
+
+
+	}                                                         
+
+
+
+
+
+  tickerText = tickerItems[i];                              
+
+
+
+
+
+	c = 0;                                                    
+
+
+
+
+
+	typetext();                                               
+
+
+
+
+
+	setTimeout( "rotateTicker()", 5000 );                     
+
+
+
+
+
+	i++;                                                      
+
+
+
+
+
+}                                                           
+
+
+
+
+
+var isInTag = false;                                        
+
+
+
+
+
+function typetext() {	                                      
+
+
+
+
+
+	var thisChar = tickerText.substr(c, 1);                   
+
+
+
+
+
+	if( thisChar == '<' ){ isInTag = true; }                  
+
+
+
+
+
+	if( thisChar == '>' ){ isInTag = false; }                 
+
+
+
+
+
+	$('#ticker-area').html("&nbsp;" + tickerText.substr(0, c++));   
+
+
+
+
+
+	if(c < tickerText.length+1)                                     
+
+
+
+
+
+		if( isInTag ){                                                
+
+
+
+
+
+			typetext();                                                 
+
+
+
+
+
+		}else{                                                        
+
+
+
+
+
+			setTimeout("typetext()", 28);                               
+
+
+
+
+
+		}                                                             
+
+
+
+
+
+	else {                                                          
+
+
+
+
+
+		c = 1;                                                        
+
+
+
+
+
+		tickerText = "";                                              
+
+
+
+
+
+	}	                                                              
+
+
+
+
+
+}                                                                 
+
+
+
+
+
+  </script> 
+
+
+			
+
+
+	
+
+ 
+
+   <style>#content .post {
+
+
+    border: none !important; </style> 
+
+
+ 
+
+  	<link rel="alternate" type="application/rss+xml" title="MyLymbo &raquo; All roads lead to&#8230; Comments Feed" href="http://mylymbo.com/featured/all-roads-lead-to/feed/" />
+<link rel='stylesheet' id='mailchimpSF_main_css-css'  href='http://mylymbo.com/?mcsf_action=main_css&#038;ver=3.4.2' type='text/css' media='all' />
+<!--[if IE]>
+<link rel='stylesheet' id='mailchimpSF_ie_css-css'  href='http://mylymbo.com/wp-content/plugins/mailchimp/css/ie.css?ver=3.4.2' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='jetpack-widgets-css'  href='http://mylymbo.com/wp-content/plugins/jetpack/modules/widgets/widgets.css?ver=20121003' type='text/css' media='all' />
+<script type='text/javascript' src='http://mylymbo.com/wp-includes/js/jquery/jquery.js?ver=1.7.2'></script>
+<script type='text/javascript' src='http://mylymbo.com/wp-content/plugins/mailchimp/js/scrollTo.js?ver=1.2.10'></script>
+<script type='text/javascript' src='http://mylymbo.com/wp-includes/js/jquery/jquery.form.js?ver=2.73'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mailchimpSF = {"ajax_url":"http:\/\/mylymbo.com\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://mylymbo.com/wp-content/plugins/mailchimp/js/mailchimp.js?ver=1.2.10'></script>
+<script type='text/javascript' src='http://mylymbo.com/wp-includes/js/comment-reply.js?ver=3.4.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mylymbo.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mylymbo.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Wisdom, Courage, &amp; a Sound Mind' href='http://mylymbo.com/featured/wisdom-courage-a-sound-mind/' />
+<link rel='next' title='Just give &#8216;em a mic' href='http://mylymbo.com/featured/just-give-em-a-mic/' />
+<meta name="generator" content="WordPress 3.4.2" />
+<link rel='canonical' href='http://mylymbo.com/featured/all-roads-lead-to/' />
+<link rel='shortlink' href='http://wp.me/p1H2JO-1U' />
+
+			<link rel="stylesheet" type="text/css" href="http://mylymbo.com/index.php?ak_action=aktt_css&v=2.4" />
+			<script type="text/javascript" src="http://mylymbo.com/index.php?ak_action=aktt_js&v=2.4"></script>
+		<link rel="stylesheet" type="text/css" href="http://mylymbo.com/wp-content/plugins/wp-recaptcha/recaptcha.css" />  
+
+
+      <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css' />
+
+
+       <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css' />
+
+
+       <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold&subset=latin' rel='stylesheet' type='text/css' />
+
+
+       <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css' />
+
+
+ 
+
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24470917-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<link rel="canonical" href="http://mylymbo.com/featured/all-roads-lead-to/" />
+
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+
+
+<div id="wrapper">
+
+
+
+
+
+	<header><div id="topmenu">
+
+
+<div id="topmenuleft">
+
+
+			<div id="topMenu" class="ddsmoothmenu"><ul id="menu-nav-menu" class="menu"><li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="http://www.mylymbo.com">Home</a></li>
+<li id="menu-item-302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-302"><a href="http://mylymbo.com/?page_id=58">About ML</a></li>
+<li id="menu-item-301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-301"><a href="http://mylymbo.com/contact/">Contact</a></li>
+</ul></div>
+
+</div>
+
+
+<div id="topmenuright">
+
+
+ <ul>
+
+
+ <li id="rssb">
+
+
+ Thu, Nov 2012
+
+ </li>
+
+
+ <li class="rssnav"><a href="http://mylymbo.com/?feed=atom">RSS</a></li>
+
+
+ <li><a href="">Newsletter</a></li>
+
+
+ </ul>
+
+
+</div>
+
+
+</div>
+
+
+	 
+
+
+     <div id="logowrap">
+
+
+     <div id="logo"><a href="http://mylymbo.com"><img src="http://www.mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/ml-logo.png" alt="MyLymbo.com" /></a></div>
+
+
+     <div id="logohead">
+
+
+     <div id="headad">  
+
+
+     
+
+
+     </div>
+
+
+     <div id="twfb">
+
+
+     <ul>   <li>  <a href="http://www.facebook.com/pages/MyLymbocom/237638213205" target="_blank"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/facebook.png" alt="Become a Fan!" /></a></li>
+
+
+ <li> 
+
+
+   <a href="http://twitter.com/mylymbo" class="tip_trigger"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/twitter.png" alt="Follow On Twitter" /><span class="tip">    <ul id="twitter_update_list">
+
+
+    </ul>
+
+
+    <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script><script type="text/javascript" src="http://twitter.com/statuses/user_timeline/mylymbo.json?callback=twitterCallback2&count=1"></script>
+
+
+
+
+
+</span></a>
+
+
+     </li>
+
+
+   
+
+
+      <li> <a href="http://mylymbo.com/?feed=atom"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/rssicon.png" alt="Subcribe to Our RSS Feed" /></a></li>
+
+
+     </ul>
+
+
+     </div>
+
+
+     </div>
+
+
+     <div id="cb"></div>
+
+
+     </div>    <div id="cb"></div>
+
+
+		<nav>
+
+
+	<div id="navigation">
+
+
+			<div id="nav" class="ddsmoothmenu1"><ul id="menu-main-menu" class="menu"><li id="menu-item-5" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-5"><a href="http://mylymbo.com/category/featured/">Featured</a></li>
+<li id="menu-item-6" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6"><a href="http://mylymbo.com/category/news/">News</a></li>
+<li id="menu-item-94" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-94"><a href="http://mylymbo.com/category/ml-boxing/">ML Boxing</a></li>
+<li id="menu-item-95" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-95"><a href="http://mylymbo.com/category/news/hear/">Hear</a></li>
+<li id="menu-item-8" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8"><a href="http://mylymbo.com/category/feel/">Feel</a></li>
+<li id="menu-item-96" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-96"><a href="http://mylymbo.com/category/react/">React</a></li>
+</ul></div>
+
+</div>
+
+
+		</nav>
+
+
+      
+
+
+	 
+
+
+	</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section>    
+  <div id="headgal">
+	<div id="featured" style="padding-left: 14px !important;">
+		<a class="prevPage browse left"></a>
+		<div class="scrollable" style="height: 60px !important">	
+			<div id="thumbs">
+  
+   
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/react/the-deceived-noble-soldier/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2011/08/s1-50x45.jpg" class="attachment-singlegalthumb wp-post-image" alt="s" title="s" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/react/the-deceived-noble-soldier/" title="The Deceived Noble Soldier">The Deceived Noble Soldier</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/bible-focus/are-you-eating-every-day/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2011/07/breadBible-50x45.jpg" class="attachment-singlegalthumb wp-post-image" alt="breadBible" title="breadBible" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/bible-focus/are-you-eating-every-day/" title="Are you eating every day?">Are you eating every day?</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/bible-focus/scripture-teaching-a-chicken-latin/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2011/07/bible-reading-guy-782907121-50x45.jpg" class="attachment-singlegalthumb wp-post-image" alt="bible-reading-guy-78290712" title="bible-reading-guy-78290712" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/bible-focus/scripture-teaching-a-chicken-latin/" title="Scripture: teaching a chicken latin">Scripture: teaching a chicken latin</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/react/its-not-about-religion-its-about-relationship/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2011/07/RainbowCoexistPosterSymbolsVersionEMAIL-50x45.jpg" class="attachment-singlegalthumb wp-post-image" alt="RainbowCoexistPosterSymbolsVersionEMAIL" title="RainbowCoexistPosterSymbolsVersionEMAIL" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/react/its-not-about-religion-its-about-relationship/" title="It&#8217;s not about religion, its about relationship.">It&#8217;s not about religion, its about relationship.</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/react/for-aspiring-and-current-gospel-artists/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2011/07/lampmode-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="lampmode" title="lampmode" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/react/for-aspiring-and-current-gospel-artists/" title="For aspiring and current gospel artists">For aspiring and current gospel artists</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/bible-focus/follow-your-heart/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/10/follow_your_heart-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="follow_your_heart" title="follow_your_heart" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/bible-focus/follow-your-heart/" title="Dissecting the phrase: &#8220;Follow Your Heart&#8221;">Dissecting the phrase: &#8220;Follow Your Heart&#8221;</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/react/solid-rock/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/09/unstable-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="unstable" title="unstable" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/react/solid-rock/" title="On Christ the Solid Rock i stand &#8211; all other ground is sinking sand.">On Christ the Solid Rock i stand &#8211; all other ground is sinking sand.</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/bible-focus/broken-software/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/08/broken-software-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="broken-software" title="broken-software" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/bible-focus/broken-software/" title="Why on earth am i here? &#8211; broken software">Why on earth am i here? &#8211; broken software</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/featured/just-give-em-a-mic/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/08/microphone1-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="microphone" title="microphone" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/featured/just-give-em-a-mic/" title="Just give &#8216;em a mic">Just give &#8216;em a mic</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/react/in-line/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/07/line1-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="line" title="line" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/react/in-line/" title="In Line: what i learned from being in line at the apple store">In Line: what i learned from being in line at the apple store</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/feeling/are-we-in-this-thing-or-what/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/03/pentecost1-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="pentecost" title="pentecost" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/feeling/are-we-in-this-thing-or-what/" title="Are We In This Thing or what?">Are We In This Thing or what?</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/feeling/battleground-from-dead-to-alive/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/02/urban1-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="urban" title="urban" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/feeling/battleground-from-dead-to-alive/" title="Battleground: from dead to alive">Battleground: from dead to alive</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  	 
+			</div>			 
+		</div> 
+		<a class="nextPage browse right"></a>
+	<div id="theticker">
+    <div id="m3ticker">
+       <div id="tickimg">        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/youarehere.png" alt="" />    </div>  
+          <div id="m3crumbs">	<div id="crumbs"><a href="http://mylymbo.com">Home</a> &raquo; <a href="http://mylymbo.com/category/featured/" title="View all posts in Featured">Featured</a> &raquo; <span class="current">All roads lead to&#8230;</span></div></div>
+   <div id="cb"></div>
+    </div>  <div class="navi"></div>  <div id="cb"></div>
+    </div>
+    </div>       
+ <div id="content">	
+	
+
+		<article class="post">
+			<h2>  All roads lead to&#8230;</h2>
+			<div class="pmetasingle"> Posted In <a href="http://mylymbo.com/category/featured/" title="View all posts in Featured" rel="category tag">Featured</a>, <a href="http://mylymbo.com/category/reacting/" title="View all posts in reacting" rel="category tag">reacting</a> - By <b><a href="http://mylymbo.com/author/admin/" title="View all posts by Donald John">Donald John </a></b>  
+            	       On Saturday, July 31st, 2010 With
+    <a href="#comments"> 3 Comments</a>  
+        
+            </div>
+              
+    <center></center>
+			<div class="entry">
+			  <p><a onclick="javascript:_gaq.push(['_trackPageview', '/download/wp-content/uploads/2010/07/roads35741.png']);"  href="http://mylymbo.com/wp-content/uploads/2010/07/roads35741.png"><img class="size-full wp-image-338 aligncenter" title="roads3574" src="http://mylymbo.com/wp-content/uploads/2010/07/roads35741.png" alt="" width="660" height="330" /></a><br />
+Here we are. Evening&#8217; everybody. I come to you in peace.<br />
+I&#8217;m reading a book called <a onclick="javascript:_gaq.push(['_trackPageview', '/out/www.radicalthebook.com/']);"  href="http://www.radicalthebook.com/"><strong>RADICAL</strong></a> by <a onclick="javascript:_gaq.push(['_trackPageview', '/out/www.radicalthebook.com/author.html']);"  href="http://www.radicalthebook.com/author.html">David Platt</a> (<a onclick="javascript:_gaq.push(['_trackPageview', '/out/twitter.com/plattdavid']);"  href="http://twitter.com/plattdavid">follow him on Twitter</a>) and he brought up a short but solid anecdote.</p>
+<p>Today, belief systems sprout everywhere and go every which way. We ask, <em>&#8220;If there is a God, how can He be limited to only one faith&#8217;s vision of Him&#8230; or Her&#8230;&#8221; </em>Especially in America, where sharing one&#8217;s faith is barely tolerated and looked down upon if done persistently, individuals who get the chance to study other belief systems may develop an idea that all religions have a piece of the Ultimate Truth.</p>
+<p>I mean, some religions mirror each other in some areas and practices. Many many religions have some story of a great flood. Many many have prophets, and sometimes mention the same ones! Well then.. it seems like the key to understanding is an even and open observation of all available belief systems.</p>
+<p><strong>Once, it was explained this way:</strong> All religions are trying to reach a perfect God. Its as if the followers of each religion are scaling a mountain from different sides. Sometimes they overlap, sometimes not&#8230; but they all are going to the same tip -&gt; and it doesn&#8217;t matter which route you take, just as long as you don&#8217;t stop climbing and you don&#8217;t impede anyone else&#8217;s progress.</p>
+<p><span style="font-size: 110%;"><strong>WHETHER YOU KNOW ME OR NOT, I EXPRESS THIS NEXT POINT TO YOU AS A FRIEND&#8230; A FELLOW SOUL IN THIS SPIRITUAL UNIVERSE. </strong><br />
+</span><br />
+Do not buy into this! All the souls of the world may be scaling the mountain but the One True God HAS COME DOWN ALREADY! He has come down from the mountain to be with His creations and to teach them they cannot do it on their own. Don&#8217;t try to climb life&#8217;s mountain thinking anyone who starts will finish where they should no matter how they climb.</p>
+<p><em>There is only one Way. </em><br />
+Donald John</p>
+
+			</div>
+			
+			<div class="ptags">Tags: <a href="http://mylymbo.com/tag/jesus/" rel="tag">Jesus</a>, <a href="http://mylymbo.com/tag/roads/" rel="tag">roads</a>, <a href="http://mylymbo.com/tag/salvation/" rel="tag">salvation</a></div>
+		</article>
+	
+  
+    <center></center>
+
+  
+      <style>input, textarea{}
+#authorarea{border:#9EBAC7 1px solid; margin:10px 0px; padding:6px 8px 14px 6px; background-repeat:no-repeat; color:#555; background-color:#e2eaee}
+#authorarea h3{font-size:14px; color:#333; font-weight:bold; margin:0}
+#authorarea h3 a{text-decoration:none; color:#333; font-weight:bold}
+#authorarea img{margin:0;  float:left; border:1px solid #ddd; width:60px; height:60px;  margin-right:12px}
+#authorarea p{color:#333; margin:0}
+#authorarea p a{color:#333}
+.authorinfo{ }
+</style>
+<div id="authorarea">
+<img src="http://mylymbo.com/wp-content/uploads/userphoto/1.thumbnail.jpg" alt="Donald John" width="79" height="80" class="photo" />
+<div class="authorinfo">
+<p><b>About <a href="http://mylymbo.com/author/admin/" title="Posts by Donald John" rel="author">Donald John</a></b> - </p>
+</div>
+</div>    
+
+<div id="related" class="clearfix">
+	<div id="sharemark">
+<div style="float: left;"><h1>Related Posts</h1></div>
+ <div class="share">
+                 <ul> <li>
+                      <a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent('http://mylymbo.com/featured/all-roads-lead-to/')+'&amp;title='+encodeURIComponent('All roads lead to&#8230;'),'delicious', 'toolbar=no,width=550,height=550'); return false;"> 
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/delicious.png" alt="Add to Delicious" border="0" /></a> 
+                      </li>  
+                      <li>
+                      <a href="javascript:var d=document,f='http://www.facebook.com/share',l=d.location,e=encodeURIComponent,p='.php?src=bm&amp;v=4&amp;i=1245532349&amp;u='+e(l.href)+'&amp;t='+e(d.title);1;try{if (!/^(.*\.)?facebook\.[^.]*$/.test(l.host))throw(0);share_internal_bookmarklet(p)}catch(z) {a=function() {if (!window.open(f+'r'+p,'sharer','toolbar=0,status=0,resizable=1,width=626,height=436'))l.href=f+p};if (/Firefox/.test(navigator.userAgent))setTimeout(a,0);else{a()}}void(0)" onclick="return wait_for_load(this, event, function() { return false });" id="share_bookmark" title="Share on Facebook">
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/facebookicon.png" border="0" /></a>
+                      </li>
+                      <li>
+
+                      <a href="http://friendfeed.com/?url=http://mylymbo.com/featured/all-roads-lead-to/&amp;title=All roads lead to&#8230;" target="_blank">
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/friendfeed.png" alt="Share on FriendFeed" border="0" /></a> </li>
+               <li>
+                <a href='javascript:(function(){var a=window,b=document,c=encodeURIComponent,d=a.open("http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk="+c(b.location)+"&amp;title="+c(b.title),"bkmk_popup","left="+((a.screenX||a.screenLeft)+10)+",top="+((a.screenY||a.screenTop)+10)+",height=420px,width=550px,resizable=1,alwaysRaised=1");a.setTimeout(function(){d.focus()},300)})();'> 
+ <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/google.png" border="0" /> </a>
+
+   </li>
+    <li><a href="http://digg.com/submit?phase=2&url=http://mylymbo.com/featured/all-roads-lead-to/&title=All roads lead to&#8230;"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/digg.png" alt="Digg" /></a></li>
+
+                        <li><a href="http://twitter.com/home?status=Currently reading http://mylymbo.com/featured/all-roads-lead-to/"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/twittericon.png" alt="" width="32px" height="32px" /></a></li>
+                      <li>  
+
+                      <a href="http://www.reddit.com/submit" onclick="window.location = 'http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> 
+
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/reddit.png" alt="submit to reddit" border="0" /> </a>
+                      </li>
+                      <li>      <a href="javascript:location.href='http://www.myspace.com/Modules/PostTo/Pages/?c='+encodeURIComponent(location.href)+'&amp;t='+encodeURIComponent(document.title)"> 
+
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/myspace.png" border="0" /> </a>
+                      </li>
+                      <li>   
+                      <a href="http://www.stumbleupon.com/submit?url=http://mylymbo.com/featured/all-roads-lead-to/&title=All roads lead to&#8230;">
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/stumbleupon.png" border="0" /></a>    
+                      </li>
+                      <li>   
+                      <a href="javascript:void(document.location='http://technorati.com/faves?sub=favthis&amp;add='+escape(document.location))">
+
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/technorati.png" border="0" /></a> 
+                      </li>
+                        <li>   
+                      <a href="RSS">
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/rssiconsingle.png" border="0" /></a> 
+                      </li>
+                     </ul> </div>
+	<div id="cb"></div>
+</div>
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/bible-focus/dont-judge-me/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2011/07/djm-150x125.jpg" class="attachment-relatedimg wp-post-image" alt="djm" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/bible-focus/dont-judge-me/" rel="bookmark" title="Don&#8217;t Judge Me!!!!!!">Don&#8217;t Judge Me!!!!!!</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/bible-focus/men-and-women-worlds-longest-wrestling-match/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2011/07/Adam_and_Eve-150x125.jpg" class="attachment-relatedimg wp-post-image" alt="Adam_and_Eve" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/bible-focus/men-and-women-worlds-longest-wrestling-match/" rel="bookmark" title="Men and women: worlds longest wrestling match">Men and women: worlds longest wrestling match</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/featured/understanding-2/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2011/01/socrates-150x125.png" class="attachment-relatedimg wp-post-image" alt="socrates" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/featured/understanding-2/" rel="bookmark" title="A bit about understanding">A bit about understanding</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/bible-focus/follow-your-heart/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/10/follow_your_heart-150x125.png" class="attachment-relatedimg wp-post-image" alt="follow_your_heart" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/bible-focus/follow-your-heart/" rel="bookmark" title="Dissecting the phrase: &#8220;Follow Your Heart&#8221;">Dissecting the phrase: &#8220;Follow Your Heart&#8221;</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/react/solid-rock/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/09/unstable-150x125.png" class="attachment-relatedimg wp-post-image" alt="unstable" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/react/solid-rock/" rel="bookmark" title="On Christ the Solid Rock i stand &#8211; all other ground is sinking sand.">On Christ the Solid Rock i stand &#8211; all other ground is sinking sand.</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/bible-focus/broken-software/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/08/broken-software-150x125.png" class="attachment-relatedimg wp-post-image" alt="broken-software" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/bible-focus/broken-software/" rel="bookmark" title="Why on earth am i here? &#8211; broken software">Why on earth am i here? &#8211; broken software</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/featured/the-price-of-pearls/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/08/poor-467x2701-150x125.png" class="attachment-relatedimg wp-post-image" alt="poor-467x270" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/featured/the-price-of-pearls/" rel="bookmark" title="A woman in somalia &#8211; The Price of Pearls">A woman in somalia &#8211; The Price of Pearls</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/featured/just-give-em-a-mic/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/08/microphone1-150x125.png" class="attachment-relatedimg wp-post-image" alt="microphone" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/featured/just-give-em-a-mic/" rel="bookmark" title="Just give &#8216;em a mic">Just give &#8216;em a mic</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/featured/wisdom-courage-a-sound-mind/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/07/wiz1-150x125.png" class="attachment-relatedimg wp-post-image" alt="wiz" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/featured/wisdom-courage-a-sound-mind/" rel="bookmark" title="Wisdom, Courage, &#038; a Sound Mind">Wisdom, Courage, &#038; a Sound Mind</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/react/in-line/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/07/line1-150x125.png" class="attachment-relatedimg wp-post-image" alt="line" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/react/in-line/" rel="bookmark" title="In Line: what i learned from being in line at the apple store">In Line: what i learned from being in line at the apple store</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+
+</div> <div id="cb"></div>
+ 	
+		
+<!-- You can start editing here. --> 
+<div class="comments-box"> <a name="comments" id="comments"></a>
+  
+  	<div id="displaying">Displaying 3 Comments  </div>
+                       
+                       	<div id="haveyoursay">Have Your Say  </div>
+                       	<br />
+  <ol class="commentlist">
+    		<li class="comment even thread-even depth-1" id="comment-67">
+				<div id="div-comment-67" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' />		<cite class="fn">Ben</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/featured/all-roads-lead-to/#comment-67">
+			July 31, 2010 at 4:22 am</a>		</div>
+
+		<p>When I read that snipit I didn&#8217;t reach the same conclusion you did. I saw it as the writer trying to explain why all religions should get along since we share many similarities. Yes, we serve the 1 true God but I don&#8217;t think he was trying to belittle that in anyway.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='http://mylymbo.com/featured/all-roads-lead-to/?replytocom=67#respond' onclick='return addComment.moveForm("div-comment-67", "67", "respond", "118")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-68">
+				<div id="div-comment-68" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' />		<cite class="fn">donald John</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/featured/all-roads-lead-to/#comment-68">
+			July 31, 2010 at 10:48 pm</a>		</div>
+
+		<p>hey ben, David actually wrote about how there is only one way. he talked about how many people in general either intentionally or unintentionally presume all religions lead to the same place. both him and i go against that mode of thinking.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='http://mylymbo.com/featured/all-roads-lead-to/?replytocom=68#respond' onclick='return addComment.moveForm("div-comment-68", "68", "respond", "118")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-69">
+				<div id="div-comment-69" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' />		<cite class="fn">Ben</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/featured/all-roads-lead-to/#comment-69">
+			August 1, 2010 at 3:44 pm</a>		</div>
+
+		<p>Interesting&#8230;.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='http://mylymbo.com/featured/all-roads-lead-to/?replytocom=69#respond' onclick='return addComment.moveForm("div-comment-69", "69", "respond", "118")'>Reply</a>		</div>
+				</div>
+		</li>
+
+  </ol>
+  <div class="navigation">
+    <div class="left">
+      
+    </div>
+    <div class="right">
+      
+    </div>
+  </div>
+  
+     	 
+  <div id="respond">     
+    <h2>Leave a comment</h2>
+    <div class="cancel-comment-reply"> <small>
+      <a rel="nofollow" id="cancel-comment-reply-link" href="http://mylymbo.com/featured/all-roads-lead-to/#respond" style="display:none;">Click here to cancel reply.</a>
+      </small> </div>
+    
+    <form action="http://mylymbo.com/wp-comments-post.php" method="post" id="commentform">
+      
+      <p>
+        <input class="author" type="text" value="Your Name..." onclick="this.value='';" name="author" id="author" size="22" tabindex="1"/>
+        <label for="author"><small>
+        (Required)
+        </small></label>
+      </p>
+      <p>
+        <input class="email" type="text" value="Your Email..." onclick="this.value='';" name="email" id="email" size="22" tabindex="2"/>
+        <label for="email"><small>(Will not be published)
+         (Required)
+        </small></label>
+      </p>
+      <p>
+        <input class="url" type="text" value="Your Website..." onclick="this.value='';" name="url" id="url" size="22" tabindex="3"/>
+        <label for="url"><small>(Optional)</small></label>
+      </p>
+      
+
+      <p>
+        <textarea name="comment" id="comment" tabindex="4"></textarea>
+      </p>
+           <p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>
+      <p>
+        <input class="submit" name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+        <input type='hidden' name='comment_post_ID' value='118' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+
+      </p>
+      <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="55abc839aa" /></p>                <script type='text/javascript'>
+                    var RecaptchaOptions = { theme : 'red', lang : 'en' , tabindex : 5 };
+                </script><script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=6LeE4McSAAAAAJrYqQUpwDCvaqLY-sPZEeG_nQXy"></script>
+
+	<noscript>
+  		<iframe src="http://www.google.com/recaptcha/api/noscript?k=6LeE4McSAAAAAJrYqQUpwDCvaqLY-sPZEeG_nQXy" height="300" width="500" frameborder="0"></iframe><br/>
+  		<textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+  		<input type="hidden" name="recaptcha_response_field" value="manual_challenge"/>
+	</noscript>                        <div id="recaptcha-submit-btn-area">&nbsp;</div>
+                        <noscript>
+                         <style type='text/css'>#submit {display:none;}</style>
+                         <input name="submit" type="submit" id="submit-alt" tabindex="6" value="Submit Comment"/> 
+                        </noscript><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p>
+    </form>
+    
+  </div>
+  
+</div>
+
+
+ </div>  
+     </div><!-- end #content -->
+
+    <aside>
+
+   
+ 
+		    	 <div class="fsearchbg"> 
+
+      	<form method="get" id="footersearch" action="http://mylymbo.com/">
+
+			           <input type="text" name="s" value="Search News - Enter Keyword" onblur="if(this.value=='') this.value='Search News - Enter Keyword';" onfocus="if(this.value=='Search News - Enter Keyword') this.value='';" id="s" />
+
+			<input type="submit" value=" " id="searchsubmit" />
+
+		   </form> 
+
+       </div>
+
+		  
+<div id="mrtindiva">
+
+
+	  
+<ul class="tabs">
+    <li><a href="#tab1">Comments</a></li>
+    <li><a href="#tab2">Topics</a></li>
+        <li><a href="#tab3">Tags</a></li>
+</ul>
+
+<div class="tab_container">
+    <div id="tab1" class="tab_content">
+      
+ 
+<li class="">Donald John on <a href="http://mylymbo.com/react/the-deceived-noble-soldier/#comment-183">The Deceived Noble Soldier</a></li><li class="">Donald John on <a href="http://mylymbo.com/react/the-deceived-noble-soldier/#comment-118">The Deceived Noble Soldier</a></li><li class=""><a onclick="javascript:_gaq.push(['_trackPageview', '/out/YourWebsite...']);"  href='http://YourWebsite...' rel='external nofollow' class='url'>What</a> on <a href="http://mylymbo.com/react/the-deceived-noble-soldier/#comment-117">The Deceived Noble Soldier</a></li><li class=""><a onclick="javascript:_gaq.push(['_trackPageview', '/out/YourWebsite...']);"  href='http://YourWebsite...' rel='external nofollow' class='url'>Ben</a> on <a href="http://mylymbo.com/react/the-deceived-noble-soldier/#comment-115">The Deceived Noble Soldier</a></li><li class=""><a onclick="javascript:_gaq.push(['_trackPageview', '/out/YourWebsite...']);"  href='http://YourWebsite...' rel='external nofollow' class='url'>Ben</a> on <a href="http://mylymbo.com/bible-focus/are-you-eating-every-day/#comment-114">Are you eating every day?</a></li> 
+    </div>
+    <div id="tab2" class="tab_content">
+      
+      <div class="section widget_categories2">
+		 
+			<ul>
+					<li class="cat-item cat-item-3"><a href="http://mylymbo.com/category/bible-focus/" title="View all posts filed under Bible Focus">Bible Focus</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://mylymbo.com/category/featured/" title="View all posts filed under Featured">Featured</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://mylymbo.com/category/feel/" title="View all posts filed under Feel">Feel</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://mylymbo.com/category/feeling/" title="View all posts filed under feeling">feeling</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://mylymbo.com/category/news/hear/" title="View all posts filed under Hear">Hear</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://mylymbo.com/category/ml-boxing/" title="View all posts filed under ML Boxing">ML Boxing</a>
+</li>
+	<li class="cat-item cat-item-102"><a href="http://mylymbo.com/category/bible-focus/ml-nightlight/" title="Brief, concise, clear, readings of the word of God. I can&#039;t think of any better way to get centered around God&#039;s word than to read it and digest it.">ML Night Light</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://mylymbo.com/category/news/" title="View all posts filed under News">News</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://mylymbo.com/category/react/" title="View all posts filed under React">React</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://mylymbo.com/category/reacting/" title="View all posts filed under reacting">reacting</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://mylymbo.com/category/thinking/" title="View all posts filed under thinking">thinking</a>
+</li>
+ 
+			</ul>
+		</div>
+       
+    </div>
+     <div id="tab3" class="tab_content">
+   <a href='http://mylymbo.com/tag/apple/' class='tag-link-13' title='1 topic' style='font-size: 8pt;'>apple</a>
+<a href='http://mylymbo.com/tag/attention/' class='tag-link-14' title='1 topic' style='font-size: 8pt;'>attention</a>
+<a href='http://mylymbo.com/tag/authority/' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>authority</a>
+<a href='http://mylymbo.com/tag/bad/' class='tag-link-16' title='1 topic' style='font-size: 8pt;'>bad</a>
+<a href='http://mylymbo.com/tag/battle/' class='tag-link-17' title='1 topic' style='font-size: 8pt;'>battle</a>
+<a href='http://mylymbo.com/tag/battleground/' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>battleground</a>
+<a href='http://mylymbo.com/tag/belief/' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>belief</a>
+<a href='http://mylymbo.com/tag/bible/' class='tag-link-20' title='2 topics' style='font-size: 14.3pt;'>bible</a>
+<a href='http://mylymbo.com/tag/break/' class='tag-link-21' title='1 topic' style='font-size: 8pt;'>break</a>
+<a href='http://mylymbo.com/tag/charity/' class='tag-link-22' title='1 topic' style='font-size: 8pt;'>charity</a>
+<a href='http://mylymbo.com/tag/che-guevara/' class='tag-link-23' title='1 topic' style='font-size: 8pt;'>che guevara</a>
+<a href='http://mylymbo.com/tag/children/' class='tag-link-24' title='1 topic' style='font-size: 8pt;'>children</a>
+<a href='http://mylymbo.com/tag/chris-brown/' class='tag-link-25' title='1 topic' style='font-size: 8pt;'>chris brown</a>
+<a href='http://mylymbo.com/tag/christ/' class='tag-link-26' title='1 topic' style='font-size: 8pt;'>Christ</a>
+<a href='http://mylymbo.com/tag/courage/' class='tag-link-27' title='1 topic' style='font-size: 8pt;'>courage</a>
+<a href='http://mylymbo.com/tag/cursing/' class='tag-link-28' title='1 topic' style='font-size: 8pt;'>cursing</a>
+<a href='http://mylymbo.com/tag/destiny/' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>destiny</a>
+<a href='http://mylymbo.com/tag/encouragement/' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>encouragement</a>
+<a href='http://mylymbo.com/tag/existence/' class='tag-link-31' title='1 topic' style='font-size: 8pt;'>existence</a>
+<a href='http://mylymbo.com/tag/faith/' class='tag-link-32' title='3 topics' style='font-size: 18.5pt;'>faith</a>
+<a href='http://mylymbo.com/tag/focus/' class='tag-link-33' title='1 topic' style='font-size: 8pt;'>focus</a>
+<a href='http://mylymbo.com/tag/follow/' class='tag-link-34' title='1 topic' style='font-size: 8pt;'>follow</a>
+<a href='http://mylymbo.com/tag/friends/' class='tag-link-35' title='1 topic' style='font-size: 8pt;'>friends</a>
+<a href='http://mylymbo.com/tag/friendship/' class='tag-link-36' title='1 topic' style='font-size: 8pt;'>friendship</a>
+<a href='http://mylymbo.com/tag/gay/' class='tag-link-37' title='1 topic' style='font-size: 8pt;'>gay</a>
+<a href='http://mylymbo.com/tag/god/' class='tag-link-38' title='3 topics' style='font-size: 18.5pt;'>God</a>
+<a href='http://mylymbo.com/tag/graduation/' class='tag-link-39' title='1 topic' style='font-size: 8pt;'>graduation</a>
+<a href='http://mylymbo.com/tag/guidance/' class='tag-link-40' title='1 topic' style='font-size: 8pt;'>guidance</a>
+<a href='http://mylymbo.com/tag/heart/' class='tag-link-41' title='3 topics' style='font-size: 18.5pt;'>heart</a>
+<a href='http://mylymbo.com/tag/heaven/' class='tag-link-42' title='1 topic' style='font-size: 8pt;'>heaven</a>
+<a href='http://mylymbo.com/tag/holy/' class='tag-link-43' title='1 topic' style='font-size: 8pt;'>holy</a>
+<a href='http://mylymbo.com/tag/homosexuality/' class='tag-link-44' title='1 topic' style='font-size: 8pt;'>homosexuality</a>
+<a href='http://mylymbo.com/tag/idol/' class='tag-link-45' title='1 topic' style='font-size: 8pt;'>idol</a>
+<a href='http://mylymbo.com/tag/jesus/' class='tag-link-46' title='4 topics' style='font-size: 22pt;'>Jesus</a>
+<a href='http://mylymbo.com/tag/judgement/' class='tag-link-47' title='2 topics' style='font-size: 14.3pt;'>judgement</a>
+<a href='http://mylymbo.com/tag/language/' class='tag-link-48' title='1 topic' style='font-size: 8pt;'>language</a>
+<a href='http://mylymbo.com/tag/life/' class='tag-link-49' title='1 topic' style='font-size: 8pt;'>life</a>
+<a href='http://mylymbo.com/tag/love/' class='tag-link-51' title='2 topics' style='font-size: 14.3pt;'>love</a>
+<a href='http://mylymbo.com/tag/music/' class='tag-link-89' title='2 topics' style='font-size: 14.3pt;'>music</a>
+<a href='http://mylymbo.com/tag/relationship/' class='tag-link-97' title='2 topics' style='font-size: 14.3pt;'>relationship</a>
+<a href='http://mylymbo.com/tag/school/' class='tag-link-68' title='2 topics' style='font-size: 14.3pt;'>school</a>
+<a href='http://mylymbo.com/tag/scripture/' class='tag-link-100' title='2 topics' style='font-size: 14.3pt;'>scripture</a>
+<a href='http://mylymbo.com/tag/truth/' class='tag-link-79' title='2 topics' style='font-size: 14.3pt;'>truth</a>
+<a href='http://mylymbo.com/tag/women/' class='tag-link-91' title='2 topics' style='font-size: 14.3pt;'>women</a>
+<a href='http://mylymbo.com/tag/words/' class='tag-link-85' title='2 topics' style='font-size: 14.3pt;'>words</a>
+    </div>
+</div> </div>
+			<div id="sidebar">
+
+<div class="section widget_mailchimpsf_widget"><div id="sidebartitlewrapper"><h3>Sign up for the ML Box-Plot</h3></div><div class="sectioncont">	
+<div id="mc_signup">
+	<form method="post" action="#mc_signup" id="mc_signup_form">
+		<input type="hidden" id="mc_submit_type" name="mc_submit_type" value="html" />
+		<input type="hidden" name="mcsf_action" value="mc_submit_signup_form" />
+		<input type="hidden" id="_mc_submit_signup_form_nonce" name="_mc_submit_signup_form_nonce" value="aff8cc2a7e" />		
+		
+	<div class="mc_form_inside">
+		
+		<div class="updated" id="mc_message">
+					</div><!-- /mc_message -->
+
+		
+<div class="mc_merge_var">
+		<label for="mc_mv_EMAIL" class="mc_var_label">Email Address<span class="mc_required">*</span></label>
+	<input type="text" size="18" value="" name="mc_mv_EMAIL" id="mc_mv_EMAIL" class="mc_input"/>
+</div><!-- /mc_merge_var -->
+<div class="mc_merge_var">
+		<label for="mc_mv_FNAME" class="mc_var_label">First Name</label>
+	<input type="text" size="18" value="" name="mc_mv_FNAME" id="mc_mv_FNAME" class="mc_input"/>
+</div><!-- /mc_merge_var -->
+<div class="mc_merge_var">
+		<label for="mc_mv_LNAME" class="mc_var_label">Last Name</label>
+	<input type="text" size="18" value="" name="mc_mv_LNAME" id="mc_mv_LNAME" class="mc_input"/>
+</div><!-- /mc_merge_var -->			<div id="mc-indicates-required">
+				* = required field			</div><!-- /mc-indicates-required -->
+			
+		<div class="mc_signup_submit">
+			<input type="submit" name="mc_signup_submit" id="mc_signup_submit" value="Subscribe" class="button" />
+		</div><!-- /mc_signup_submit -->
+	
+	
+				
+	</div><!-- /mc_form_inside -->
+	</form><!-- /mc_signup_form -->
+</div><!-- /mc_signup_container -->
+	</div></div><div class="section widget_tag_cloud"><div id="sidebartitlewrapper"><h3>Tags</h3></div><div class="sectioncont"><div class="tagcloud"><a href='http://mylymbo.com/tag/apple/' class='tag-link-13' title='1 topic' style='font-size: 8pt;'>apple</a>
+<a href='http://mylymbo.com/tag/attention/' class='tag-link-14' title='1 topic' style='font-size: 8pt;'>attention</a>
+<a href='http://mylymbo.com/tag/authority/' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>authority</a>
+<a href='http://mylymbo.com/tag/bad/' class='tag-link-16' title='1 topic' style='font-size: 8pt;'>bad</a>
+<a href='http://mylymbo.com/tag/battle/' class='tag-link-17' title='1 topic' style='font-size: 8pt;'>battle</a>
+<a href='http://mylymbo.com/tag/battleground/' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>battleground</a>
+<a href='http://mylymbo.com/tag/belief/' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>belief</a>
+<a href='http://mylymbo.com/tag/bible/' class='tag-link-20' title='2 topics' style='font-size: 14.3pt;'>bible</a>
+<a href='http://mylymbo.com/tag/break/' class='tag-link-21' title='1 topic' style='font-size: 8pt;'>break</a>
+<a href='http://mylymbo.com/tag/charity/' class='tag-link-22' title='1 topic' style='font-size: 8pt;'>charity</a>
+<a href='http://mylymbo.com/tag/che-guevara/' class='tag-link-23' title='1 topic' style='font-size: 8pt;'>che guevara</a>
+<a href='http://mylymbo.com/tag/children/' class='tag-link-24' title='1 topic' style='font-size: 8pt;'>children</a>
+<a href='http://mylymbo.com/tag/chris-brown/' class='tag-link-25' title='1 topic' style='font-size: 8pt;'>chris brown</a>
+<a href='http://mylymbo.com/tag/christ/' class='tag-link-26' title='1 topic' style='font-size: 8pt;'>Christ</a>
+<a href='http://mylymbo.com/tag/courage/' class='tag-link-27' title='1 topic' style='font-size: 8pt;'>courage</a>
+<a href='http://mylymbo.com/tag/cursing/' class='tag-link-28' title='1 topic' style='font-size: 8pt;'>cursing</a>
+<a href='http://mylymbo.com/tag/destiny/' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>destiny</a>
+<a href='http://mylymbo.com/tag/encouragement/' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>encouragement</a>
+<a href='http://mylymbo.com/tag/existence/' class='tag-link-31' title='1 topic' style='font-size: 8pt;'>existence</a>
+<a href='http://mylymbo.com/tag/faith/' class='tag-link-32' title='3 topics' style='font-size: 18.5pt;'>faith</a>
+<a href='http://mylymbo.com/tag/focus/' class='tag-link-33' title='1 topic' style='font-size: 8pt;'>focus</a>
+<a href='http://mylymbo.com/tag/follow/' class='tag-link-34' title='1 topic' style='font-size: 8pt;'>follow</a>
+<a href='http://mylymbo.com/tag/friends/' class='tag-link-35' title='1 topic' style='font-size: 8pt;'>friends</a>
+<a href='http://mylymbo.com/tag/friendship/' class='tag-link-36' title='1 topic' style='font-size: 8pt;'>friendship</a>
+<a href='http://mylymbo.com/tag/gay/' class='tag-link-37' title='1 topic' style='font-size: 8pt;'>gay</a>
+<a href='http://mylymbo.com/tag/god/' class='tag-link-38' title='3 topics' style='font-size: 18.5pt;'>God</a>
+<a href='http://mylymbo.com/tag/graduation/' class='tag-link-39' title='1 topic' style='font-size: 8pt;'>graduation</a>
+<a href='http://mylymbo.com/tag/guidance/' class='tag-link-40' title='1 topic' style='font-size: 8pt;'>guidance</a>
+<a href='http://mylymbo.com/tag/heart/' class='tag-link-41' title='3 topics' style='font-size: 18.5pt;'>heart</a>
+<a href='http://mylymbo.com/tag/heaven/' class='tag-link-42' title='1 topic' style='font-size: 8pt;'>heaven</a>
+<a href='http://mylymbo.com/tag/holy/' class='tag-link-43' title='1 topic' style='font-size: 8pt;'>holy</a>
+<a href='http://mylymbo.com/tag/homosexuality/' class='tag-link-44' title='1 topic' style='font-size: 8pt;'>homosexuality</a>
+<a href='http://mylymbo.com/tag/idol/' class='tag-link-45' title='1 topic' style='font-size: 8pt;'>idol</a>
+<a href='http://mylymbo.com/tag/jesus/' class='tag-link-46' title='4 topics' style='font-size: 22pt;'>Jesus</a>
+<a href='http://mylymbo.com/tag/judgement/' class='tag-link-47' title='2 topics' style='font-size: 14.3pt;'>judgement</a>
+<a href='http://mylymbo.com/tag/language/' class='tag-link-48' title='1 topic' style='font-size: 8pt;'>language</a>
+<a href='http://mylymbo.com/tag/life/' class='tag-link-49' title='1 topic' style='font-size: 8pt;'>life</a>
+<a href='http://mylymbo.com/tag/love/' class='tag-link-51' title='2 topics' style='font-size: 14.3pt;'>love</a>
+<a href='http://mylymbo.com/tag/music/' class='tag-link-89' title='2 topics' style='font-size: 14.3pt;'>music</a>
+<a href='http://mylymbo.com/tag/relationship/' class='tag-link-97' title='2 topics' style='font-size: 14.3pt;'>relationship</a>
+<a href='http://mylymbo.com/tag/school/' class='tag-link-68' title='2 topics' style='font-size: 14.3pt;'>school</a>
+<a href='http://mylymbo.com/tag/scripture/' class='tag-link-100' title='2 topics' style='font-size: 14.3pt;'>scripture</a>
+<a href='http://mylymbo.com/tag/truth/' class='tag-link-79' title='2 topics' style='font-size: 14.3pt;'>truth</a>
+<a href='http://mylymbo.com/tag/women/' class='tag-link-91' title='2 topics' style='font-size: 14.3pt;'>women</a>
+<a href='http://mylymbo.com/tag/words/' class='tag-link-85' title='2 topics' style='font-size: 14.3pt;'>words</a></div>
+</div></div>
+
+			</div><!-- end #r-sidebar -->
+
+		</aside>  
+</section>
+</div>
+<!-- #wrapper -->
+
+<footer>
+<div id="footer1">
+  <div id="footerwrapper1">
+    <div id="fsidebar1">
+      <div class="widget"><ul><h3>Categories</h3>		<ul>
+	<li class="cat-item cat-item-3"><a href="http://mylymbo.com/category/bible-focus/" title="View all posts filed under Bible Focus">Bible Focus</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://mylymbo.com/category/featured/" title="View all posts filed under Featured">Featured</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://mylymbo.com/category/feel/" title="View all posts filed under Feel">Feel</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://mylymbo.com/category/feeling/" title="View all posts filed under feeling">feeling</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://mylymbo.com/category/news/hear/" title="View all posts filed under Hear">Hear</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://mylymbo.com/category/ml-boxing/" title="View all posts filed under ML Boxing">ML Boxing</a>
+</li>
+	<li class="cat-item cat-item-102"><a href="http://mylymbo.com/category/bible-focus/ml-nightlight/" title="Brief, concise, clear, readings of the word of God. I can&#039;t think of any better way to get centered around God&#039;s word than to read it and digest it.">ML Night Light</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://mylymbo.com/category/news/" title="View all posts filed under News">News</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://mylymbo.com/category/react/" title="View all posts filed under React">React</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://mylymbo.com/category/reacting/" title="View all posts filed under reacting">reacting</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://mylymbo.com/category/thinking/" title="View all posts filed under thinking">thinking</a>
+</li>
+		</ul>
+</ul></div>    </div>
+    <div id="fsidebar2">
+      <div class="widget"><ul><h3>Blogroll</h3>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.desiringGod.org" title="Site covering the ministry of John Piper. ">Desiring God</a></li>
+<li><a href="http://www.heartcrymissionary.com" title="A mission founded by preacher, Paul Washer. ">HeartCry Missionary Society</a></li>
+<li><a href="http://www.illbehonest.com" title="Great for videos on sound doctrine and preaching. ">I&#039;ll Be Honest</a></li>
+<li><a href="http://www.lanechaplain.com" title="Good source of current news and interviews with reformed believers. ">Lane Chaplain</a></li>
+<li><a href="http://www.thegospelcoalition.org" title="Team of pastors come together to magnify sound doctrine. ">The Gospel Coalition</a></li>
+
+	</ul>
+</ul></div>
+    </div>
+    <div id="fsidebar3">
+      <div class="widget"><ul><h3>Meta</h3>			<ul>
+						<li><a href="http://mylymbo.com/wp-login.php">Log in</a></li>
+			<li><a href="http://mylymbo.com/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://mylymbo.com/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+						</ul>
+</ul></div>    </div>
+    <div id="fsidebar4">
+      <!--
+      <div class="widget">
+        <ul>
+          <h3>About Our Site</h3>
+          <ul>
+                                                          </ul>
+        </ul>
+      </div>
+      -->
+    </div>
+    <div style="clear: both;"> </div>
+  </div>
+</div>
+<div id="footer2">
+<div id="footerwrapper2">
+  <div id="fotnav">
+    <ul id="fnav">
+      <center>
+              </center>
+    </ul>
+  </div>
+  <div id="fotbot">
+    <div class="fotlogoleft">
+      <div class="fotcopy"> &copy; 2010  - All Rights Reserved </div>
+    </div>
+    <div class="fotlogoright">
+      <ul id="skyline">
+        <li id="pad1"> <a href="http://www.facebook.com/pages/MyLymbocom/237638213205"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/fot-fb.png" alt="Become a Fan!" /></a></li>
+        <li id="pad1"> <a href="http://twitter.com/mylymbo"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/fot-twitter.png" alt="Follow On Twitter" /></a></li>
+        <li id="pad1"> <a href="http://mylymbo.com/?feed=atom"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/fot-feed.png" alt="Subcribe to Our RSS Feed" /></a></li>
+        <li>
+          <form method="get" id="footersearch" action="http://mylymbo.com/">
+            <input type="text" name="s" value="Search News - Enter Keyword" onblur="if(this.value=='') this.value='Search News - Enter Keyword';" onfocus="if(this.value=='Search News - Enter Keyword') this.value='';" id="s" />
+            <input type="submit" value=" " id="searchsubmit" />
+          </form>
+        </li>
+      </ul>
+    </div>
+    <div id="cb"></div>
+  </div>
+</div>
+</footer>
+<script src="http://bible.logos.com/jsapi/Referencetagging.js" type="text/javascript"></script>
+<script type="text/javascript">
+			Logos.ReferenceTagging.lbsBibleVersion = "ESV";
+			Logos.ReferenceTagging.lbsLibronixBibleVersion = "ESV";
+									Logos.ReferenceTagging.lbsLibronixLinkIcon = "dark";
+									Logos.ReferenceTagging.lbsNoSearchTagNames = [ "h1", "h2", "h3" ];
+															Logos.ReferenceTagging.tag();
+		</script>
+
+<!-- Google Analytics Code added by Web Ninja Google Analytics plugin v1.0.7: http://josh-fowler.com/?page_id=70 -->
+<script type='text/javascript'>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXX-X']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- Web Ninja Google Analytics Done -->
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2012Novaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://mylymbo.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=3.4.2'></script>
+	<div style="display:none">
+	<div class="grofile-hash-map-a078aefaace50a1f2ba7eddd3bbf3a25">
+	</div>
+	<div class="grofile-hash-map-d41d8cd98f00b204e9800998ecf8427e">
+	</div>
+	</div>
+                <script type="text/javascript">
+                var sub = document.getElementById('submit');
+                document.getElementById('recaptcha-submit-btn-area').appendChild (sub);
+                document.getElementById('submit').tabIndex = 6;
+                if ( typeof _recaptcha_wordpress_savedcomment != 'undefined') {
+                        document.getElementById('comment').value = _recaptcha_wordpress_savedcomment;
+                }
+                document.getElementById('recaptcha_table').style.direction = 'ltr';
+                </script><script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201247'></script>
+
+	<script src="http://stats.wordpress.com/e-201247.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:1.8.2',blog:'25034968',post:'118'});
+	var load_cmc = function(){linktracker_init(25034968,118,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script>
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Served from: mylymbo.com @ 2012-11-22 13:52:26 -->

@@ -1,0 +1,1754 @@
+ <!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+
+<head profile="http://gmpg.org/xfn/11">
+
+
+	<meta charset="UTF-8" />
+
+
+<title>Chris Brown: The power of persuasion &#8211; MyLymbo</title> 
+
+
+<meta name="description" content="" />
+
+
+<meta name="keywords" content="" />
+
+
+	<link rel="stylesheet" href="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/style.css" type="text/css" media="screen" />
+
+
+    <link rel="shortcut icon" href="http://www.mylymbo.com/favicon.ico" />
+
+
+    <link rel="shortcut icon" href="http://www.mylymbo.com/favicon.ico" type="image/x-icon" />
+
+
+    <meta name="generator" content="Magazine3 Framework Version 3.0" />
+
+
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+
+	<link rel="alternate" type="application/rss+xml" title="MyLymbo RSS Feed" href="http://mylymbo.com/feed/" />
+
+
+	<link rel="pingback" href="http://mylymbo.com/xmlrpc.php" />
+
+
+	<script type="text/javascript" src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/js/jquery-1.4.4.min.js"></script>
+
+
+	<script type="text/javascript" src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/js/ddsmoothmenu.js"></script> 
+
+
+    <script type="text/javascript" src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/js/jquery.tools.min.js"></script>
+
+
+ <script type="text/javascript">
+
+
+var $ = jQuery.noConflict();
+
+
+$(document).ready(function() {
+
+
+
+
+
+	//When page loads...
+
+
+	$(".tab_content").hide(); //Hide all content
+
+
+	$("ul.tabs li:first").addClass("active").show(); //Activate first tab
+
+
+	$(".tab_content:first").show(); //Show first tab content
+
+
+
+
+
+	//On Click Event
+
+
+	$("ul.tabs li").click(function() {
+
+
+
+
+
+		$("ul.tabs li").removeClass("active"); //Remove any "active" class
+
+
+		$(this).addClass("active"); //Add "active" class to selected tab
+
+
+		$(".tab_content").hide(); //Hide all tab content
+
+
+
+
+
+		var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
+
+
+		$(activeTab).fadeIn(); //Fade in the active ID content
+
+
+		return false;
+
+
+	});
+
+
+
+
+
+});
+
+
+</script>
+
+
+ <script type="text/javascript">
+
+
+$(document).ready(function() {
+
+
+	//Tooltips
+
+
+	$(".tip_trigger").hover(function(){
+
+
+		tip = $(this).find('.tip');
+
+
+		tip.show(); //Show tooltip
+
+
+	}, function() {
+
+
+		tip.hide(); //Hide tooltip		  
+
+
+	}).mousemove(function(e) {
+
+
+		var mousex = e.pageX + 20; //Get X coodrinates
+
+
+		var mousey = e.pageY + 20; //Get Y coordinates
+
+
+		var tipWidth = tip.width(); //Find width of tooltip
+
+
+		var tipHeight = tip.height(); //Find height of tooltip
+
+
+		
+
+
+		//Distance of element from the right edge of viewport
+
+
+		var tipVisX = $(window).width() - (mousex + tipWidth);
+
+
+		//Distance of element from the bottom of viewport
+
+
+		var tipVisY = $(window).height() - (mousey + tipHeight);
+
+
+		  
+
+
+		if ( tipVisX < 20 ) { //If tooltip exceeds the X coordinate of viewport
+
+
+			mousex = e.pageX - tipWidth - 20;
+
+
+		} if ( tipVisY < 20 ) { //If tooltip exceeds the Y coordinate of viewport
+
+
+			mousey = e.pageY - tipHeight - 20;
+
+
+		} 
+
+
+		tip.css({  top: mousey, left: mousex });
+
+
+	});
+
+
+});
+
+
+
+
+
+</script>
+
+
+	 <script type="text/javascript">
+
+
+ $(document).ready(function() {
+
+
+
+
+
+ $("div.scrollable").scrollable({
+
+
+
+
+
+		size: 3,
+
+
+		items: '#thumbs',   
+
+
+		hoverClass: 'hover',
+
+
+		speed: 400,
+
+
+		keyboard: false,
+
+
+		clickable: false
+
+
+
+
+
+	}).navigator();	
+
+
+	  
+
+
+  		
+
+
+});
+
+
+</script>
+
+
+  
+
+
+ <script type="text/javascript">   
+
+
+
+
+
+  // when the DOM is ready...        
+
+
+
+
+
+$(document).ready(function () {      
+
+
+
+
+
+  // load the ticker                 
+
+
+
+
+
+	createTicker();                    
+
+
+
+
+
+});                                  
+
+
+
+
+
+function createTicker(){             
+
+
+
+
+
+	// put all list elements within #ticker-area into array   
+
+
+
+
+
+	var tickerLIs = $("#ticker-area ul").children();          
+
+
+
+
+
+	tickerItems = new Array();                                
+
+
+
+
+
+	tickerLIs.each(function(el) {                             
+
+
+
+
+
+		tickerItems.push( jQuery(this).html() );                
+
+
+
+
+
+	});                                                       
+
+
+
+
+
+	i = 0                                                     
+
+
+
+
+
+	rotateTicker();                                           
+
+
+
+
+
+}                                                           
+
+
+
+
+
+function rotateTicker(){                                    
+
+
+
+
+
+	if( i == tickerItems.length ){                            
+
+
+
+
+
+	  i = 0;                                                  
+
+
+
+
+
+	}                                                         
+
+
+
+
+
+  tickerText = tickerItems[i];                              
+
+
+
+
+
+	c = 0;                                                    
+
+
+
+
+
+	typetext();                                               
+
+
+
+
+
+	setTimeout( "rotateTicker()", 5000 );                     
+
+
+
+
+
+	i++;                                                      
+
+
+
+
+
+}                                                           
+
+
+
+
+
+var isInTag = false;                                        
+
+
+
+
+
+function typetext() {	                                      
+
+
+
+
+
+	var thisChar = tickerText.substr(c, 1);                   
+
+
+
+
+
+	if( thisChar == '<' ){ isInTag = true; }                  
+
+
+
+
+
+	if( thisChar == '>' ){ isInTag = false; }                 
+
+
+
+
+
+	$('#ticker-area').html("&nbsp;" + tickerText.substr(0, c++));   
+
+
+
+
+
+	if(c < tickerText.length+1)                                     
+
+
+
+
+
+		if( isInTag ){                                                
+
+
+
+
+
+			typetext();                                                 
+
+
+
+
+
+		}else{                                                        
+
+
+
+
+
+			setTimeout("typetext()", 28);                               
+
+
+
+
+
+		}                                                             
+
+
+
+
+
+	else {                                                          
+
+
+
+
+
+		c = 1;                                                        
+
+
+
+
+
+		tickerText = "";                                              
+
+
+
+
+
+	}	                                                              
+
+
+
+
+
+}                                                                 
+
+
+
+
+
+  </script> 
+
+
+			
+
+
+	
+
+ 
+
+   <style>#content .post {
+
+
+    border: none !important; </style> 
+
+
+ 
+
+  	<link rel="alternate" type="application/rss+xml" title="MyLymbo &raquo; Chris Brown: The power of persuasion Comments Feed" href="http://mylymbo.com/news/chris-brown-the-power-of-persuasion/feed/" />
+<link rel='stylesheet' id='mailchimpSF_main_css-css'  href='http://mylymbo.com/?mcsf_action=main_css&#038;ver=3.4.2' type='text/css' media='all' />
+<!--[if IE]>
+<link rel='stylesheet' id='mailchimpSF_ie_css-css'  href='http://mylymbo.com/wp-content/plugins/mailchimp/css/ie.css?ver=3.4.2' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='jetpack-widgets-css'  href='http://mylymbo.com/wp-content/plugins/jetpack/modules/widgets/widgets.css?ver=20121003' type='text/css' media='all' />
+<script type='text/javascript' src='http://mylymbo.com/wp-includes/js/jquery/jquery.js?ver=1.7.2'></script>
+<script type='text/javascript' src='http://mylymbo.com/wp-content/plugins/mailchimp/js/scrollTo.js?ver=1.2.10'></script>
+<script type='text/javascript' src='http://mylymbo.com/wp-includes/js/jquery/jquery.form.js?ver=2.73'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mailchimpSF = {"ajax_url":"http:\/\/mylymbo.com\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://mylymbo.com/wp-content/plugins/mailchimp/js/mailchimp.js?ver=1.2.10'></script>
+<script type='text/javascript' src='http://mylymbo.com/wp-includes/js/comment-reply.js?ver=3.4.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mylymbo.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mylymbo.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='When That Last Straw Weighs You Down' href='http://mylymbo.com/featured/when-that-last-straw-weighs-you-down/' />
+<link rel='next' title='I GRADUATED!!' href='http://mylymbo.com/featured/i-graduated/' />
+<meta name="generator" content="WordPress 3.4.2" />
+<link rel='canonical' href='http://mylymbo.com/news/chris-brown-the-power-of-persuasion/' />
+<link rel='shortlink' href='http://wp.me/p1H2JO-1M' />
+
+			<link rel="stylesheet" type="text/css" href="http://mylymbo.com/index.php?ak_action=aktt_css&v=2.4" />
+			<script type="text/javascript" src="http://mylymbo.com/index.php?ak_action=aktt_js&v=2.4"></script>
+		<link rel="stylesheet" type="text/css" href="http://mylymbo.com/wp-content/plugins/wp-recaptcha/recaptcha.css" />  
+
+
+      <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css' />
+
+
+       <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css' />
+
+
+       <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold&subset=latin' rel='stylesheet' type='text/css' />
+
+
+       <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css' />
+
+
+ 
+
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24470917-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<link rel="canonical" href="http://mylymbo.com/news/chris-brown-the-power-of-persuasion/" />
+
+
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+
+
+<div id="wrapper">
+
+
+
+
+
+	<header><div id="topmenu">
+
+
+<div id="topmenuleft">
+
+
+			<div id="topMenu" class="ddsmoothmenu"><ul id="menu-nav-menu" class="menu"><li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="http://www.mylymbo.com">Home</a></li>
+<li id="menu-item-302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-302"><a href="http://mylymbo.com/?page_id=58">About ML</a></li>
+<li id="menu-item-301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-301"><a href="http://mylymbo.com/contact/">Contact</a></li>
+</ul></div>
+
+</div>
+
+
+<div id="topmenuright">
+
+
+ <ul>
+
+
+ <li id="rssb">
+
+
+ Wed, Mar 2013
+
+ </li>
+
+
+ <li class="rssnav"><a href="http://mylymbo.com/?feed=atom">RSS</a></li>
+
+
+ <li><a href="">Newsletter</a></li>
+
+
+ </ul>
+
+
+</div>
+
+
+</div>
+
+
+	 
+
+
+     <div id="logowrap">
+
+
+     <div id="logo"><a href="http://mylymbo.com"><img src="http://www.mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/ml-logo.png" alt="MyLymbo.com" /></a></div>
+
+
+     <div id="logohead">
+
+
+     <div id="headad">  
+
+
+     
+
+
+     </div>
+
+
+     <div id="twfb">
+
+
+     <ul>   <li>  <a href="http://www.facebook.com/pages/MyLymbocom/237638213205" target="_blank"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/facebook.png" alt="Become a Fan!" /></a></li>
+
+
+ <li> 
+
+
+   <a href="http://twitter.com/mylymbo" class="tip_trigger"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/twitter.png" alt="Follow On Twitter" /><span class="tip">    <ul id="twitter_update_list">
+
+
+    </ul>
+
+
+    <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script><script type="text/javascript" src="http://twitter.com/statuses/user_timeline/mylymbo.json?callback=twitterCallback2&count=1"></script>
+
+
+
+
+
+</span></a>
+
+
+     </li>
+
+
+   
+
+
+      <li> <a href="http://mylymbo.com/?feed=atom"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/rssicon.png" alt="Subcribe to Our RSS Feed" /></a></li>
+
+
+     </ul>
+
+
+     </div>
+
+
+     </div>
+
+
+     <div id="cb"></div>
+
+
+     </div>    <div id="cb"></div>
+
+
+		<nav>
+
+
+	<div id="navigation">
+
+
+			<div id="nav" class="ddsmoothmenu1"><ul id="menu-main-menu" class="menu"><li id="menu-item-5" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5"><a href="http://mylymbo.com/category/featured/">Featured</a></li>
+<li id="menu-item-6" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-6"><a href="http://mylymbo.com/category/news/">News</a></li>
+<li id="menu-item-94" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-94"><a href="http://mylymbo.com/category/ml-boxing/">ML Boxing</a></li>
+<li id="menu-item-95" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-95"><a href="http://mylymbo.com/category/news/hear/">Hear</a></li>
+<li id="menu-item-8" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8"><a href="http://mylymbo.com/category/feel/">Feel</a></li>
+<li id="menu-item-96" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-96"><a href="http://mylymbo.com/category/react/">React</a></li>
+</ul></div>
+
+</div>
+
+
+		</nav>
+
+
+      
+
+
+	 
+
+
+	</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section>    
+  <div id="headgal">
+	<div id="featured" style="padding-left: 14px !important;">
+		<a class="prevPage browse left"></a>
+		<div class="scrollable" style="height: 60px !important">	
+			<div id="thumbs">
+  
+   
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/react/the-deceived-noble-soldier/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2011/08/s1-50x45.jpg" class="attachment-singlegalthumb wp-post-image" alt="s" title="s" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/react/the-deceived-noble-soldier/" title="The Deceived Noble Soldier">The Deceived Noble Soldier</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/bible-focus/are-you-eating-every-day/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2011/07/breadBible-50x45.jpg" class="attachment-singlegalthumb wp-post-image" alt="breadBible" title="breadBible" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/bible-focus/are-you-eating-every-day/" title="Are you eating every day?">Are you eating every day?</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/bible-focus/scripture-teaching-a-chicken-latin/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2011/07/bible-reading-guy-782907121-50x45.jpg" class="attachment-singlegalthumb wp-post-image" alt="bible-reading-guy-78290712" title="bible-reading-guy-78290712" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/bible-focus/scripture-teaching-a-chicken-latin/" title="Scripture: teaching a chicken latin">Scripture: teaching a chicken latin</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/react/its-not-about-religion-its-about-relationship/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2011/07/RainbowCoexistPosterSymbolsVersionEMAIL-50x45.jpg" class="attachment-singlegalthumb wp-post-image" alt="RainbowCoexistPosterSymbolsVersionEMAIL" title="RainbowCoexistPosterSymbolsVersionEMAIL" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/react/its-not-about-religion-its-about-relationship/" title="It&#8217;s not about religion, its about relationship.">It&#8217;s not about religion, its about relationship.</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/react/for-aspiring-and-current-gospel-artists/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2011/07/lampmode-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="lampmode" title="lampmode" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/react/for-aspiring-and-current-gospel-artists/" title="For aspiring and current gospel artists">For aspiring and current gospel artists</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/bible-focus/follow-your-heart/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/10/follow_your_heart-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="follow_your_heart" title="follow_your_heart" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/bible-focus/follow-your-heart/" title="Dissecting the phrase: &#8220;Follow Your Heart&#8221;">Dissecting the phrase: &#8220;Follow Your Heart&#8221;</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/react/solid-rock/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/09/unstable-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="unstable" title="unstable" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/react/solid-rock/" title="On Christ the Solid Rock i stand &#8211; all other ground is sinking sand.">On Christ the Solid Rock i stand &#8211; all other ground is sinking sand.</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/bible-focus/broken-software/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/08/broken-software-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="broken-software" title="broken-software" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/bible-focus/broken-software/" title="Why on earth am i here? &#8211; broken software">Why on earth am i here? &#8211; broken software</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/featured/just-give-em-a-mic/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/08/microphone1-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="microphone" title="microphone" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/featured/just-give-em-a-mic/" title="Just give &#8216;em a mic">Just give &#8216;em a mic</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/react/in-line/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/07/line1-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="line" title="line" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/react/in-line/" title="In Line: what i learned from being in line at the apple store">In Line: what i learned from being in line at the apple store</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/feeling/are-we-in-this-thing-or-what/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/03/pentecost1-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="pentecost" title="pentecost" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/feeling/are-we-in-this-thing-or-what/" title="Are We In This Thing or what?">Are We In This Thing or what?</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  
+				<div class="slidesingle">
+			 <span id="slidesingleimg">
+<a href="http://mylymbo.com/feeling/battleground-from-dead-to-alive/"><img width="50" height="45" src="http://mylymbo.com/wp-content/uploads/2010/02/urban1-50x45.png" class="attachment-singlegalthumb wp-post-image" alt="urban" title="urban" /></a>	</span>
+ 					<h2><a href="http://mylymbo.com/feeling/battleground-from-dead-to-alive/" title="Battleground: from dead to alive">Battleground: from dead to alive</a></h2>
+					<div id="cb"></div>
+			 	</div>
+					  	 
+			</div>			 
+		</div> 
+		<a class="nextPage browse right"></a>
+	<div id="theticker">
+    <div id="m3ticker">
+       <div id="tickimg">        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/youarehere.png" alt="" />    </div>  
+          <div id="m3crumbs">	<div id="crumbs"><a href="http://mylymbo.com">Home</a> &raquo; <a href="http://mylymbo.com/category/news/" title="View all posts in News">News</a> &raquo; <span class="current">Chris Brown: The power of persuasion</span></div></div>
+   <div id="cb"></div>
+    </div>  <div class="navi"></div>  <div id="cb"></div>
+    </div>
+    </div>       
+ <div id="content">	
+	
+
+		<article class="post">
+			<h2>  Chris Brown: The power of persuasion</h2>
+			<div class="pmetasingle"> Posted In <a href="http://mylymbo.com/category/news/" title="View all posts in News" rel="category tag">News</a>, <a href="http://mylymbo.com/category/reacting/" title="View all posts in reacting" rel="category tag">reacting</a> - By <b><a href="http://mylymbo.com/author/admin/" title="View all posts by Donald John">Donald John </a></b>  
+            	       On Monday, April 26th, 2010 With
+    <a href="#comments"> 10 Comments</a>  
+        
+            </div>
+              
+    <center></center>
+			<div class="entry">
+			  <p><strong><a onclick="javascript:_gaq.push(['_trackPageview', '/download/wp-content/uploads/2010/04/brown1.png']);"  href="http://mylymbo.com/wp-content/uploads/2010/04/brown1.png"><img class="size-full wp-image-353 aligncenter" title="brown" src="http://mylymbo.com/wp-content/uploads/2010/04/brown1.png" alt="" width="660" height="330" /></a><br />
+It&#8217;s no secret the legal trouble Chris Brown landed in a while back with Rihanna. However, I want to bring to your attention the change in image he has undergone and the reaction it has caused.</strong></p>
+<p>After the charges were brought and Chris Brown&#8217;s name was properly placed in the mouths of millions, he adopted a somber and apologetic image. He was, no doubt, in a very awkward situation, being a public model for many young and old alike. He even took his name of Nickelodeon&#8217;s Kids Choice Awards nomination roll because of the scandal.</p>
+<p><strong>He offered this quote:</strong><br />
+<em>&#8220;I am seeking the counseling of my pastor, my mother and other loved ones and I am committed, with God&#8217;s help, to emerging a better person.&#8221;</em></p>
+<p>After this, he laid low for a while and time passed like it usually does. Both he and Rihanna have come out with new material since, but I was surprised to see so many defending him and his come-back after his image dropped so much.</p>
+<p>My insides wants to shout out with: &#8220;Chris Brown supporters!! Why do you defend him so soon after he has been charged with the beating of a woman?&#8221;&#8230; but this post is about image and persuasion.<br />
+Brown has a new song out now called &#8220;Holla At Me&#8221;. The lyrics are very bold for someone who just was found to have beaten his girlfriend.</p>
+<p><strong>Here are some of the lyrics: </strong><br />
+<em>&#8230;knockin&#8217; niqqaz over, call me bulldozer, one more drink for these *** and it&#8217;s over, cause i&#8217;m a strike that something like a cobra,<br />
+&#8230;Ah chu, bless me twice, be a rich nigga I be shitin&#8217; on your life, magazine covers, magnum rubbers, I mean magnum, I don&#8217;t f*** with stragglers&#8230;<br />
+&#8230;blowin&#8217; out there brains, car need a new roof, lookin&#8217; like a superstar, when I roll thru and shawty I&#8217;m the truth, so mama what it do?&#8230;<br />
+&#8230;I&#8217;m the shit yeah I go hard, don&#8217;t stand in lines nigga I bogart fat boy celebrity cause I&#8217;m so large and don&#8217;t need no battery cause I&#8217;m in charge&#8230;</em></p>
+<div><span style="font-family: Arial, Arial, Helvetica, sans-serif;">How can an audience listen to these lyrics from any figure who has had such a past? &#8230; A RECENT past?<br />
+Young people, as an audience, are being roped into things via persuasion. If the TV is playing his music again, everything must be ok. I urge you, reader, not to be persuaded into thinking that bad is good and good is bad! Please. </span></div>
+<div><span style="font-family: Arial, Arial, Helvetica, sans-serif;">You doubt the power of persuasion? 6 years ago, you couldn&#8217;t have made any male within the hip hop culture to wear skin tight jeans. (Trust me, I was a part of that culture). Now, because popular society has suddenly started it, it seems every young person has a pair of skinny jeans. </span></div>
+<div><span style="font-family: Arial, Arial, Helvetica, sans-serif;"><span style="font-family: Verdana, Arial, Helvetica, sans-serif;">Dare to disagree. Dare to agree.<br />
+Your&#8217;s truly<br />
+Donald John </span></span></div>
+
+			</div>
+			
+			<div class="ptags">Tags: <a href="http://mylymbo.com/tag/chris-brown/" rel="tag">chris brown</a>, <a href="http://mylymbo.com/tag/media/" rel="tag">media</a>, <a href="http://mylymbo.com/tag/persuasion/" rel="tag">persuasion</a></div>
+		</article>
+	
+  
+    <center></center>
+
+  
+      <style>input, textarea{}
+#authorarea{border:#9EBAC7 1px solid; margin:10px 0px; padding:6px 8px 14px 6px; background-repeat:no-repeat; color:#555; background-color:#e2eaee}
+#authorarea h3{font-size:14px; color:#333; font-weight:bold; margin:0}
+#authorarea h3 a{text-decoration:none; color:#333; font-weight:bold}
+#authorarea img{margin:0;  float:left; border:1px solid #ddd; width:60px; height:60px;  margin-right:12px}
+#authorarea p{color:#333; margin:0}
+#authorarea p a{color:#333}
+.authorinfo{ }
+</style>
+<div id="authorarea">
+<img src="http://mylymbo.com/wp-content/uploads/userphoto/1.thumbnail.jpg" alt="Donald John" width="79" height="80" class="photo" />
+<div class="authorinfo">
+<p><b>About <a href="http://mylymbo.com/author/admin/" title="Posts by Donald John" rel="author">Donald John</a></b> - </p>
+</div>
+</div>    
+
+<div id="related" class="clearfix">
+	<div id="sharemark">
+<div style="float: left;"><h1>Related Posts</h1></div>
+ <div class="share">
+                 <ul> <li>
+                      <a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent('http://mylymbo.com/news/chris-brown-the-power-of-persuasion/')+'&amp;title='+encodeURIComponent('Chris Brown: The power of persuasion'),'delicious', 'toolbar=no,width=550,height=550'); return false;"> 
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/delicious.png" alt="Add to Delicious" border="0" /></a> 
+                      </li>  
+                      <li>
+                      <a href="javascript:var d=document,f='http://www.facebook.com/share',l=d.location,e=encodeURIComponent,p='.php?src=bm&amp;v=4&amp;i=1245532349&amp;u='+e(l.href)+'&amp;t='+e(d.title);1;try{if (!/^(.*\.)?facebook\.[^.]*$/.test(l.host))throw(0);share_internal_bookmarklet(p)}catch(z) {a=function() {if (!window.open(f+'r'+p,'sharer','toolbar=0,status=0,resizable=1,width=626,height=436'))l.href=f+p};if (/Firefox/.test(navigator.userAgent))setTimeout(a,0);else{a()}}void(0)" onclick="return wait_for_load(this, event, function() { return false });" id="share_bookmark" title="Share on Facebook">
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/facebookicon.png" border="0" /></a>
+                      </li>
+                      <li>
+
+                      <a href="http://friendfeed.com/?url=http://mylymbo.com/news/chris-brown-the-power-of-persuasion/&amp;title=Chris Brown: The power of persuasion" target="_blank">
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/friendfeed.png" alt="Share on FriendFeed" border="0" /></a> </li>
+               <li>
+                <a href='javascript:(function(){var a=window,b=document,c=encodeURIComponent,d=a.open("http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk="+c(b.location)+"&amp;title="+c(b.title),"bkmk_popup","left="+((a.screenX||a.screenLeft)+10)+",top="+((a.screenY||a.screenTop)+10)+",height=420px,width=550px,resizable=1,alwaysRaised=1");a.setTimeout(function(){d.focus()},300)})();'> 
+ <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/google.png" border="0" /> </a>
+
+   </li>
+    <li><a href="http://digg.com/submit?phase=2&url=http://mylymbo.com/news/chris-brown-the-power-of-persuasion/&title=Chris Brown: The power of persuasion"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/digg.png" alt="Digg" /></a></li>
+
+                        <li><a href="http://twitter.com/home?status=Currently reading http://mylymbo.com/news/chris-brown-the-power-of-persuasion/"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/twittericon.png" alt="" width="32px" height="32px" /></a></li>
+                      <li>  
+
+                      <a href="http://www.reddit.com/submit" onclick="window.location = 'http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"> 
+
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/reddit.png" alt="submit to reddit" border="0" /> </a>
+                      </li>
+                      <li>      <a href="javascript:location.href='http://www.myspace.com/Modules/PostTo/Pages/?c='+encodeURIComponent(location.href)+'&amp;t='+encodeURIComponent(document.title)"> 
+
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/myspace.png" border="0" /> </a>
+                      </li>
+                      <li>   
+                      <a href="http://www.stumbleupon.com/submit?url=http://mylymbo.com/news/chris-brown-the-power-of-persuasion/&title=Chris Brown: The power of persuasion">
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/stumbleupon.png" border="0" /></a>    
+                      </li>
+                      <li>   
+                      <a href="javascript:void(document.location='http://technorati.com/faves?sub=favthis&amp;add='+escape(document.location))">
+
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/technorati.png" border="0" /></a> 
+                      </li>
+                        <li>   
+                      <a href="RSS">
+                        <img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/rssiconsingle.png" border="0" /></a> 
+                      </li>
+                     </ul> </div>
+	<div id="cb"></div>
+</div>
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/bible-focus/follow-your-heart/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/10/follow_your_heart-150x125.png" class="attachment-relatedimg wp-post-image" alt="follow_your_heart" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/bible-focus/follow-your-heart/" rel="bookmark" title="Dissecting the phrase: &#8220;Follow Your Heart&#8221;">Dissecting the phrase: &#8220;Follow Your Heart&#8221;</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/react/solid-rock/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/09/unstable-150x125.png" class="attachment-relatedimg wp-post-image" alt="unstable" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/react/solid-rock/" rel="bookmark" title="On Christ the Solid Rock i stand &#8211; all other ground is sinking sand.">On Christ the Solid Rock i stand &#8211; all other ground is sinking sand.</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/bible-focus/broken-software/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/08/broken-software-150x125.png" class="attachment-relatedimg wp-post-image" alt="broken-software" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/bible-focus/broken-software/" rel="bookmark" title="Why on earth am i here? &#8211; broken software">Why on earth am i here? &#8211; broken software</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/featured/just-give-em-a-mic/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/08/microphone1-150x125.png" class="attachment-relatedimg wp-post-image" alt="microphone" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/featured/just-give-em-a-mic/" rel="bookmark" title="Just give &#8216;em a mic">Just give &#8216;em a mic</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/featured/all-roads-lead-to/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/07/roads35741-150x125.png" class="attachment-relatedimg wp-post-image" alt="roads3574" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/featured/all-roads-lead-to/" rel="bookmark" title="All roads lead to&#8230;">All roads lead to&#8230;</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/featured/wisdom-courage-a-sound-mind/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/07/wiz1-150x125.png" class="attachment-relatedimg wp-post-image" alt="wiz" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/featured/wisdom-courage-a-sound-mind/" rel="bookmark" title="Wisdom, Courage, &#038; a Sound Mind">Wisdom, Courage, &#038; a Sound Mind</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/react/in-line/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/07/line1-150x125.png" class="attachment-relatedimg wp-post-image" alt="line" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/react/in-line/" rel="bookmark" title="In Line: what i learned from being in line at the apple store">In Line: what i learned from being in line at the apple store</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/feel/friends/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/05/friends1-150x125.png" class="attachment-relatedimg wp-post-image" alt="friends" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/feel/friends/" rel="bookmark" title="Friends &#8211; gotta kechum all">Friends &#8211; gotta kechum all</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/feeling/battleground-from-dead-to-alive/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/02/urban1-150x125.png" class="attachment-relatedimg wp-post-image" alt="urban" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/feeling/battleground-from-dead-to-alive/" rel="bookmark" title="Battleground: from dead to alive">Battleground: from dead to alive</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+		
+		<div class="related">
+			  
+					<span class="relatedimg">
+              
+<a href="http://mylymbo.com/featured/obedience-vs-sacrifice/"> <img width="150" height="125" src="http://mylymbo.com/wp-content/uploads/2010/02/respect1-150x125.png" class="attachment-relatedimg wp-post-image" alt="respect" title="" /> </a>
+      
+                    </span>  					
+			<div class="relatedpost">
+				<h3><a href="http://mylymbo.com/featured/obedience-vs-sacrifice/" rel="bookmark" title="Obedience vs. Sacrifice">Obedience vs. Sacrifice</a></h3>
+				 
+			</div>
+
+		</div> 
+	
+	
+
+</div> <div id="cb"></div>
+ 	
+		
+<!-- You can start editing here. --> 
+<div class="comments-box"> <a name="comments" id="comments"></a>
+  
+  	<div id="displaying">Displaying 10 Comments  </div>
+                       
+                       	<div id="haveyoursay">Have Your Say  </div>
+                       	<br />
+  <ol class="commentlist">
+    		<li class="comment even thread-even depth-1" id="comment-45">
+				<div id="div-comment-45" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' />		<cite class="fn">Ben</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/news/chris-brown-the-power-of-persuasion/#comment-45">
+			April 27, 2010 at 2:09 am</a>		</div>
+
+		<p>Although Chris Breezy was dead wrong for his violence against Rhianna, when will his sentence end? As Christians we are taught to forgive and forget. Chris accepted his wrong doing and has gotten help. I pray he is still seeking counseling and is regretful for his past actions. But that is what they are, past actions. Rhianna has moved on to a darker side as well and I&#8217;m sure it is a result of her situation with CB. I pray she too is she getting the help she requires. They have both moved on as things must. If God can forgive Chris and throw his sins in the sea of forgetfulness, why can&#8217;t we???&#8230;.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/news/chris-brown-the-power-of-persuasion/?replytocom=45#respond' onclick='return addComment.moveForm("div-comment-45", "45", "respond", "110")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-46">
+				<div id="div-comment-46" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' />		<cite class="fn">Donald John</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/news/chris-brown-the-power-of-persuasion/#comment-46">
+			April 27, 2010 at 11:57 am</a>		</div>
+
+		<p>it seems like the pop audience of america is missing the point. It&#8217;s like in the Wiz where this loud voice says &quot;The Color is RED&quot; and instantly we all believe, rejoice, and defend the color red. If beyonce who is now loved by my generation fell off as a hot topic, because of careful media presentation, pop audiences would begin to detest her. <br />Forgiveness is not what the American people have done, they have merely been suckered into believing everything is ok now. I look and see the lyrics he comes back with and I ask how anyone can defend such lyrics. We cannot separate anyone from the products of their labor. <br />Rappers now straight up tell their listeners how much better they are than they&#8230; and everyone else for that matter&#8230; Then when they get up to do their thank you speech at the awards ceremony, its all about the listeners. If they don&#8217;t mean what they say in the songs, why do they say them? <br />Is that not selling out? -&gt; to do and say things to your own people just for the sake of money and popularity and the security of your celebrity status? </p>
+<p>We know what is right and what is wrong. The songs and negative thoughts and words brought by these popular artists on tv are wrong. There is something that needs to be done. We need to actively speak out and have physical action because saying (like I hear my generation saying all the time) &quot;If some chose to listen to those songs , thats their choice&quot; is not going to cut it. Grown people and children alike are being hypnotized and changed by this culture. It&#8217;s causing a change in the mentalities of, not just the young people, so we cant even place this as a blame for the parents and them not shielding their kids enough. </p>
+<p>I feel like i&#8217;ve awoken and I&#8217;m trying my hardest to wake my generation up but they are heavy sleepers in this matter. </p>
+<p>Donald John</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/news/chris-brown-the-power-of-persuasion/?replytocom=46#respond' onclick='return addComment.moveForm("div-comment-46", "46", "respond", "110")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-47">
+				<div id="div-comment-47" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' />		<cite class="fn">Carl</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/news/chris-brown-the-power-of-persuasion/#comment-47">
+			April 30, 2010 at 12:46 am</a>		</div>
+
+		<p>I wholeheartedly disagree with this. </p>
+<p>Let thou who is without sin cast the FIRST stone. </p>
+<p>Since you&#8217;re throwing stones, Donald John, I assume your house is made of brick? </p>
+<p>I can assure you, there is some glass in it.  I don&#8217;t think Chris Brown should be persecuted for what he did. He has served his time. He has apologized. What more can he do? He is still a young entertainer and lives his life as such. Who are you, who am I to say he is wrong? Who am I to judge what he does? What I think the problem with is with PEOPLE in GENERAL today is that we do not know how to let OTHERS live so long as they are not bothering us with how they are living. Is Chris Brown rapping about his &#8216;reality&#8217; impeding upon your daily life? When has it stopped you from making a living? Feeding yourself? Doing what you love to do? Well&#8230; the reverse is that people like you (and it&#8217;s not to attack you) who seek to attack Chris Brown as a &#8216;women beater&#8217; make it impossible for him to do what he loves to do, which is make music. We HAVE to forgive, we don&#8217;t have that option. Remember the lesson on Justice. You might not feel like it is &quot;right&quot; or &quot;fair&quot; but it IS just. We must forgive, and he must be allowed to live the life that he wants to live without interference from people who seek to defame him. It&#8217;s a entirely personal choice if you choose to support his music afterward or not, but I don&#8217;t feel that anyone is wrong if they like his music. </p>
+<p> I, personally like Chris Brown&#8217;s music. and as far as his &quot;image change&quot; I think Chris Brown is just growing up. He can&#8217;t sing about the same things he did 4 or 5 years ago as a kid because his reality is different. But I assure you, the lyrics from Exclusive are very similar to Graffiti.</p>
+<p>Additionally, The skinny jeans comment is foolish. Fashion changes. Period. Skinny jeans are FASHIONABLE. People wore BAGGY jeans because they were fashionable. and Back in the day, jeans were fitted as well (maybe not skinny, but thats because they werent out yet&#8230;). People ALSO wouldn&#8217;t have worn bright colors for awhile, but they are in style so that&#8217;s what people do. &quot;In matters of style, swim with the current. in matters of principle, stand like a rock.&quot; So while I respect what you&#8217;ve said about Chris Brown off the principle of him hitting a woman, I have to disagree and call your assertion about fashion foolish. Style changes over the years&#8230;. is there something wrong with that? Hip Hop is a genre that is about fashion and culture. As the styles have changed so have the styles of rap. We went from Addidas track suits and Kangol hats, to jeans and shirts with a logo, to baggy jeans, white tees and air force ones, to skinny jeans, designer tees, and Nike Dunks. It&#8217;s ALWAYS been apart of the culture; The Music. The Dancing. The Fashion. It has evolved over time as did Rock, R&amp;B and most other art forms. </p>
+<p>For every finger we point, there are 4 pointing back at us. There is nothing wrong with &quot;speaking out&quot;, there is a WHOLE LOT wrong with Judgment. It isn&#8217;t now nor will it ever be our jobs or rights to judge our peers. Only one may judge, I&#8217;m sure you know that sir. </p>
+<p>I&#8217;ll stop now. </p>
+<p>Keep up the good work on the blog.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/news/chris-brown-the-power-of-persuasion/?replytocom=47#respond' onclick='return addComment.moveForm("div-comment-47", "47", "respond", "110")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-48">
+				<div id="div-comment-48" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/888f767804f43c357f3f1b364733fb77?s=40&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' />		<cite class="fn">Donald John</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/news/chris-brown-the-power-of-persuasion/#comment-48">
+			April 30, 2010 at 4:18 am</a>		</div>
+
+		<p>Listen. The skinny jeans comment isn&#8217;t foolish. Its an example. An example of how what&#8217;s on the TV and in the movies can influence the masses to do or wear something they would say was stupid just a year or two earlier. The purpose of this post is to ask whether those quick changes apply to morals and things of the like. </p>
+<p>Don&#8217;t get into judgement. It has become a blanket statement to throw at anyone who says something is wrong, Especially from a Christian standpoint. I am tired of it. </p>
+<p>READ THE LYRICS. WATCH THE VIDEOS. There is only one reality. Their&#8217;s is the same as mine and yours. <br />You have to agree that popular artists/actors/celebrities in general have a strong pull over young society. If those figures are making songs which promote sex, money, and drugs&#8230;.KNOWING their music will be heard by young ears, there is something wrong with that. I&#8217;m out here trying to get their audiences to realize that. As a Chris Brown fan, this isn&#8217;t what you want to hear. </p>
+<p>Its hard to hear, but there is right and there is wrong. I am a follower of Christ, so everything I do and say has to be grounded in His word. THAT&#8230; is the difference between just running off at the mouth and being judgmental. THERE WOULD BE NO PASTORS OR PREACHERS if no one took up the gumption to say something was wrong. Shoot&#8230; even saying that judging someone is wrong is SAYING SOMETHING IS WRONG! (This IS NOT!!! about judgement. It is about Influence). I can&#8217;t stress that enough. </p>
+<p>&quot;&#8230;in matters of principle, stand like a rock&quot; &#8230;. what rock do we stand on? Rocks don&#8217;t change. We have to be grounded in something, and &#8216;dime-a-dozen&#8217; &#8216;let anything slide&#8217; philosophy is not going to cut it. We must hold to an unchanging and unmoving foundation. That is the word of God. &#8211; and in no way &#8212; NO WAY &#8212; can the lyrics and actions of many popular figures be justified by that Word. <br />This is where I&#8217;m coming from. </p>
+<p>I&#8217;m writing about influence. Chris Brown is a topic and example. A topic that was chosen on purpose so that people like yourself would read it and comment. Look past Brown and into how this &quot;culture&quot; is being defined. Look into how quickly his image has changed. Look at the influence the media has had in the changing of his appearance. Good and bad has been felt for us on the TV screen and we are supposed to feel it too. </p>
+<p>We cannot miss the real issue.<br />Are we as a population being influenced so heavily that we can switch from thinking something is horrible to thinking its fine in a short amount of time? Are our morals and emotions floating out there with no anchor in such a way that they can be played with and blown around?</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/news/chris-brown-the-power-of-persuasion/?replytocom=48#respond' onclick='return addComment.moveForm("div-comment-48", "48", "respond", "110")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-49">
+				<div id="div-comment-49" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' />		<cite class="fn">Carl</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/news/chris-brown-the-power-of-persuasion/#comment-49">
+			April 30, 2010 at 5:10 am</a>		</div>
+
+		<p>I do not think everything in our lives HAS TO BE a moral judgment. When comparing style to faith you are comparing  two different things. and that&#8217;s why I called it a foolish example.  I think you underestimate the power of people&#8217;s own free will. YOU CHOOSE YOUR LIFE. If I CHOOSE to follow a TREND that is still a choice nonetheless. In MATTERS OF STYLE, you pay attention to what the media is doing. That is how &quot;style&quot; works. I don&#8217;t get my morals from the media, and I think that is the difference. Yeah, if I thought the way Chris Brown or someone else dressed was cool I might imitate that style. But that doesn&#8217;t mean that tomorrow I&#8217;m going to go smack up my significant other. </p>
+<p>There are different realities for different people. You have convinced yourself that everyone&#8217;s life is the same. I promise you Donald, your life is totally different than mine and thus we have two different versions of reality. Just because YOU say something doesn&#8217;t mean it is grounded in the word of God. That is an arrogant statement. You, my friend, will NEVER be able to convince me that YOU are the supreme expert on all things &quot;biblical&quot; and that if it flows forth from your mouth that it must be word because you my friend are not Jesus Christ. </p>
+<p>PEOPLE, much like yourself, come up with their own INTERPRETATIONS of what the BIBLE is telling us. THE BIBLE ITSELF is full of contradiction. The Gospels say the same thing in different ways. Jesus died on the cross ONE TIME, but its funny because bible writers have him saying multiple things and why? Because THEY HAVE THEIR OWN INTERPRETATIONS. Remember, the MEN who wrote the bible had AUDIENCES just as well. Thus, they wrote to APPEAL to their different audiences; changing words and fabricating stories. PREACHERS AND PASTORS TODAY DO THE SAME EXACT THING. ARROGANTLY PREACH THEIR INTERPRETATION OF THE BIBLE AS IF THEY BY SOME FORCE WERE &quot;CALLED&quot; TO PREACH THE WORD OF GOD AND HALF OF THEM ARE LIVING IN SIN AND ARE BOUND BY THE SAME SINS THAT THEY &quot;DAMN&quot; EVERY SUNDAY. So don&#8217;t talk to me about what Preachers and Pastors there are in the world. I know a lot of them; they drive BMW&#8217;s and Cadillac&#8217;s while half of their church gets their homes foreclosed on. That&#8217;s whats real. If anything is wrong, it is that.</p>
+<p>You want to know why people have turned away from the Church? It isn&#8217;t because people like Chris Brown or who ever have made songs. It is because the CHURCH has FAILED the people. Plain and simple. Please tell me what the church is SUPPOSED to do. You might attend a great church, but I can assure you that your church is the exception. We haven&#8217;t been &quot;blinded&quot; by the might powers of Jay-Z and Beyonce or whoever else is the culprit in &quot;controlling our minds&quot; as you&#8217;d tell it. If Jesus could go into most churches today he&#8217;d probably turn every table over as he did in the temples in Jerusalem. Churches with ATMs? Pastors with illegitimate children? Living immoral lives? Gambling and drinking? If someone is to be JUDGED (and yes Donald, it is judgment), it is those people for they are the ones who, by their own decree, have been entrusted to teach the world to the people. When you show me how to FIX that system, I&#8217;ll show you how to get kids to stop listening to Soldier Boy and start listening to Bishop T.D. Jakes.  LISTEN to people Donald. You are the one that should wake up. and LISTEN to other people. You do not need to agree with everything people say but you SHOULD learn to respect differences in opinion</p>
+<p>Tell me why the most vibrant congregations are the poorest congregations. The most beautiful examples of faith are the people in Africa and third-world-countries who worship despite their countries being war torn. and I guarantee you they aren&#8217;t paying 10% of their income to do such! CHURCH is an industry JUST LIKE the MUSIC industry. It is a BUSINESS. and it has an agenda. Period. But I suppose you can introduce a reasoning for this right? These are exceptions right? I suppose that REGARDLESS of HOW MANY CATHOLIC PRIEST GET CAUGHT RAPING LITTLE BOYS that INSTITUTIONALIZED RELIGION IS NOT, even if in the smallest way, TO BLAME for the DEGRADATION OF SOCIETY? I suppose that no matter how many times YOU YOURSELF see that MANY, MANY of the musicians that you know from what I call &quot;the church&quot; circuit are living the same life that you judge me for, you&#8217;ll never accept the role that the CHURCH has played in destroying the relationship that people SHOULD have with God? No right? It HAS to be all of these fornicators, drunkards and adulterers signing on 92Q who have misled the masses right?! Yet that is what we all are&#8230;&#8230;</p>
+<p>I speak not to insult, but to inform you that there IS such a thing as DIFFERENCE of opinion and no matter how you feel about it you will NEVER be right as I see it. But I will never be RIGHT as you see it. It is opinion and we both are IMPERFECT therefore it doesn&#8217;t make your opinion &quot;better than mine&quot; because you picked up a book that you aren&#8217;t even sure is translated correctly and gleamed faith from it. If I&#8217;m asleep because I choose to search outside of what you would agree with for my ideas on faith, then I will sleep comfortably knowing that I am living in the best way possible for CARL. I don&#8217;t need to please anyone but ME and my actions are between myself and God, and when you become GOD or Jesus Christ then you can stand before me and say &quot;you&#8217;re wrong&quot; but until that day I&#8217;ll never accept YOUR version of &quot;reality&quot;.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/news/chris-brown-the-power-of-persuasion/?replytocom=49#respond' onclick='return addComment.moveForm("div-comment-49", "49", "respond", "110")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-50">
+				<div id="div-comment-50" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' />		<cite class="fn">Donald John</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/news/chris-brown-the-power-of-persuasion/#comment-50">
+			April 30, 2010 at 5:42 am</a>		</div>
+
+		<p>You know that I don&#8217;t think that because I say something, that is the word of God. You know that. <br />And you know that I don&#8217;t think I&#8217;m perfect. </p>
+<p>I know its popular now to blow off the bible as fiction and contradiction but I&#8217;m not going to do that. <br />If your not for it, go against the Bible. The whole thing. If it&#8217;s imperfect, it&#8217;s not even worth believing in. If you do that, my whole basis isn&#8217;t going to make sense. <br />Be careful not to accept some things of the Word and throw out others because it is uncomfortable. </p>
+<p>But what I&#8217;m really getting at with this post is:<br />&quot;Are we as a population being influenced so heavily that we can switch from thinking something is horrible to thinking its fine in a short amount of time? Are our morals and emotions floating out there with no anchor in such a way that they can be played with and blown around?&quot;<br />Lets get at the influence side of the topic.<br />I&#8217;ll probably put up another post to get at it more clearly. </p>
+<p>Donald John</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/news/chris-brown-the-power-of-persuasion/?replytocom=50#respond' onclick='return addComment.moveForm("div-comment-50", "50", "respond", "110")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-51">
+				<div id="div-comment-51" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' />		<cite class="fn">Brandi</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/news/chris-brown-the-power-of-persuasion/#comment-51">
+			May 4, 2010 at 9:54 pm</a>		</div>
+
+		<p>Some people need to review the definition of a blog! Blogging is an expression of ones own personal belief/s and need not be accepted or shared by any other person. As I read through the comments posted, I think their were too many defensive players, if the shoe is too tight, take it off, and if it fails to fit, what are you trying it on for anyway. Like my brother, Donald John, I accept people for who they are and have many friends from many different walks of life, but right is right and wrong is wrong. One can not point fingers by repeating the word of God and if that is seen as being judgmental then let the judging commence. Known for my outspoken nature, I too have an issue with people mimicking the styles/persona of others, yet not wanting to be seen in &quot;certain lights&quot;. Birds of a feather&#8230;and all other metaphoric cliches can be inserted here! <br />      I teach 8th grade, and I try to instill in my students at their young age to not define themselves by others. No one is saying that if you wear skinny jeans or choose to define your style by ridiculous trends that your evil, but you are defined by someone elses expectation of who you are and how you&#8217;re expected to act. If you don&#8217;t think so, ask yourself, &quot;Why am I buying these jeans?&quot; Your answer just may shock you! <br />      Yes, folks tend to interpret religion to suit their belief, but the spoken word of God is just that so speaking against it or blasting &#8216;church folk&#8217; on what they do or don&#8217;t do wastes energy, time, and your breath. The last time I checked &#8216;church folk&#8217; didn&#8217;t die on the cross, but Jesus did. So if you get mad, get mad a Jesus for creating the law or better yet, get mad at yourself for not obeying it!</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/news/chris-brown-the-power-of-persuasion/?replytocom=51#respond' onclick='return addComment.moveForm("div-comment-51", "51", "respond", "110")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-52">
+				<div id="div-comment-52" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' />		<cite class="fn">someone who don't take others opinions personally</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/news/chris-brown-the-power-of-persuasion/#comment-52">
+			May 4, 2010 at 10:06 pm</a>		</div>
+
+		<p>Hey Carl looks like you took this comment a little personal. I thought this was a sight to go to and give your opinions, and we all are entitled to say what we feel is right or wrong without being verbally attacked. If we read something we should be able to agree or disagree without getting personal, because then the blind folds go on. You threw a lot of stuff out there a lot I did not agree with, but that is your opinion and you have a right to that opinion without being called wrong. I would like to say something about Christians since you threw that out there. We Christians (that includes pastors, priests, deacons etc.) are sinners saved by grace and we fall short all the time. We are far from being perfect, so don&#8217;t look at what we do and compare it to what anyone else is doing. If you believe in God He is the only one you have to please, not us.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/news/chris-brown-the-power-of-persuasion/?replytocom=52#respond' onclick='return addComment.moveForm("div-comment-52", "52", "respond", "110")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment even thread-even depth-1" id="comment-53">
+				<div id="div-comment-53" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' />		<cite class="fn">Paige</cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/news/chris-brown-the-power-of-persuasion/#comment-53">
+			May 5, 2010 at 3:31 pm</a>		</div>
+
+		<p>Hey Don, <br />      I think you brought up a great question. But, I don&#8217;t think that question was fully apparent in your article. First reading your article I thought you were simply questioning how we ignored Chris Browns disregard for his violent episode  with Rhianna by releasing a song where he describes himself as physically aggressing another individual. But, in regards to the media swaying our opinion and acceptance of Chris Brown, I can&#8217;t agree. Radio stations nationwide asked the listeners if they thought CB&#8217;s music should be played on the radio, of course there were mixed responses but the people voiced there opinion and that&#8217;s how I believe the radio stations made their decision. I definitely believe that the media has an influence on us, but not in the case of Chris Brown. I personally don&#8217;t recall any commercials or shows that influenced me or anyone else that I know to forgive/ accept or not forgive/accept Chris Brown. In my opinion we all made that decision on our own. As, I recall everyone hasn&#8217;t swayed to CB&#8217;s side he has lost a significant amount of fans that has caused him to personally go public and ask fans to buy his music. Reviewing the other comments I could tell you definitely hit a nerve but, that is what you should do! We should always question and challenge ourselves and our society because if not we wouldn&#8217;t grow. We can never get enough thoughtful dialogue. I appreciate your opinion and your post for evoking that thoughtful dialogue that we so desperately need.</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/news/chris-brown-the-power-of-persuasion/?replytocom=53#respond' onclick='return addComment.moveForm("div-comment-53", "53", "respond", "110")'>Reply</a>		</div>
+				</div>
+		</li>
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-54">
+				<div id="div-comment-54" class="comment-body">
+				<div class="comment-author vcard">
+		<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' />		<cite class="fn"><a onclick="javascript:_gaq.push(['_trackPageview', '/out/www.MyLymbo.com']);"  href='http://www.MyLymbo.com' rel='external nofollow' class='url'>Donald John</a></cite> <span class="says">says:</span>		</div>
+
+		<div class="comment-meta commentmetadata"><a href="http://mylymbo.com/news/chris-brown-the-power-of-persuasion/#comment-54">
+			May 6, 2010 at 7:53 am</a>		</div>
+
+		<p>Hey Paginas </p>
+<p>Thanks for the comment. I agree that my point could have been brought out a little more clearly. Using big names and big events like CB&#8217;s trail can mask your intent if you aren&#8217;t careful to pinpoint it right. I&#8217;m thinking about posting another blog related to the same issue but with a different flavor. </p>
+<p>Donald John</p>
+
+		<div class="reply">
+		<a class='comment-reply-link' href='/news/chris-brown-the-power-of-persuasion/?replytocom=54#respond' onclick='return addComment.moveForm("div-comment-54", "54", "respond", "110")'>Reply</a>		</div>
+				</div>
+		</li>
+
+  </ol>
+  <div class="navigation">
+    <div class="left">
+      
+    </div>
+    <div class="right">
+      
+    </div>
+  </div>
+  
+     	 
+  <div id="respond">     
+    <h2>Leave a comment</h2>
+    <div class="cancel-comment-reply"> <small>
+      <a rel="nofollow" id="cancel-comment-reply-link" href="/news/chris-brown-the-power-of-persuasion/#respond" style="display:none;">Click here to cancel reply.</a>
+      </small> </div>
+    
+    <form action="http://mylymbo.com/wp-comments-post.php" method="post" id="commentform">
+      
+      <p>
+        <input class="author" type="text" value="Your Name..." onclick="this.value='';" name="author" id="author" size="22" tabindex="1"/>
+        <label for="author"><small>
+        (Required)
+        </small></label>
+      </p>
+      <p>
+        <input class="email" type="text" value="Your Email..." onclick="this.value='';" name="email" id="email" size="22" tabindex="2"/>
+        <label for="email"><small>(Will not be published)
+         (Required)
+        </small></label>
+      </p>
+      <p>
+        <input class="url" type="text" value="Your Website..." onclick="this.value='';" name="url" id="url" size="22" tabindex="3"/>
+        <label for="url"><small>(Optional)</small></label>
+      </p>
+      
+
+      <p>
+        <textarea name="comment" id="comment" tabindex="4"></textarea>
+      </p>
+           <p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>
+      <p>
+        <input class="submit" name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+        <input type='hidden' name='comment_post_ID' value='110' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+
+      </p>
+      <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="8e22b5a834" /></p>                <script type='text/javascript'>
+                    var RecaptchaOptions = { theme : 'red', lang : 'en' , tabindex : 5 };
+                </script><script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=6LeE4McSAAAAAJrYqQUpwDCvaqLY-sPZEeG_nQXy"></script>
+
+	<noscript>
+  		<iframe src="http://www.google.com/recaptcha/api/noscript?k=6LeE4McSAAAAAJrYqQUpwDCvaqLY-sPZEeG_nQXy" height="300" width="500" frameborder="0"></iframe><br/>
+  		<textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+  		<input type="hidden" name="recaptcha_response_field" value="manual_challenge"/>
+	</noscript>                        <div id="recaptcha-submit-btn-area">&nbsp;</div>
+                        <noscript>
+                         <style type='text/css'>#submit {display:none;}</style>
+                         <input name="submit" type="submit" id="submit-alt" tabindex="6" value="Submit Comment"/> 
+                        </noscript><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p>
+    </form>
+    
+  </div>
+  
+</div>
+
+
+ </div>  
+     </div><!-- end #content -->
+
+    <aside>
+
+   
+ 
+		    	 <div class="fsearchbg"> 
+
+      	<form method="get" id="footersearch" action="http://mylymbo.com/">
+
+			           <input type="text" name="s" value="Search News - Enter Keyword" onblur="if(this.value=='') this.value='Search News - Enter Keyword';" onfocus="if(this.value=='Search News - Enter Keyword') this.value='';" id="s" />
+
+			<input type="submit" value=" " id="searchsubmit" />
+
+		   </form> 
+
+       </div>
+
+		  
+<div id="mrtindiva">
+
+
+	  
+<ul class="tabs">
+    <li><a href="#tab1">Comments</a></li>
+    <li><a href="#tab2">Topics</a></li>
+        <li><a href="#tab3">Tags</a></li>
+</ul>
+
+<div class="tab_container">
+    <div id="tab1" class="tab_content">
+      
+ 
+<li class="">Donald John on <a href="http://mylymbo.com/react/the-deceived-noble-soldier/#comment-183">The Deceived Noble Soldier</a></li><li class="">Donald John on <a href="http://mylymbo.com/react/the-deceived-noble-soldier/#comment-118">The Deceived Noble Soldier</a></li><li class=""><a onclick="javascript:_gaq.push(['_trackPageview', '/out/YourWebsite...']);"  href='http://YourWebsite...' rel='external nofollow' class='url'>What</a> on <a href="http://mylymbo.com/react/the-deceived-noble-soldier/#comment-117">The Deceived Noble Soldier</a></li><li class=""><a onclick="javascript:_gaq.push(['_trackPageview', '/out/YourWebsite...']);"  href='http://YourWebsite...' rel='external nofollow' class='url'>Ben</a> on <a href="http://mylymbo.com/react/the-deceived-noble-soldier/#comment-115">The Deceived Noble Soldier</a></li><li class=""><a onclick="javascript:_gaq.push(['_trackPageview', '/out/YourWebsite...']);"  href='http://YourWebsite...' rel='external nofollow' class='url'>Ben</a> on <a href="http://mylymbo.com/bible-focus/are-you-eating-every-day/#comment-114">Are you eating every day?</a></li> 
+    </div>
+    <div id="tab2" class="tab_content">
+      
+      <div class="section widget_categories2">
+		 
+			<ul>
+					<li class="cat-item cat-item-3"><a href="http://mylymbo.com/category/bible-focus/" title="View all posts filed under Bible Focus">Bible Focus</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://mylymbo.com/category/featured/" title="View all posts filed under Featured">Featured</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://mylymbo.com/category/feel/" title="View all posts filed under Feel">Feel</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://mylymbo.com/category/feeling/" title="View all posts filed under feeling">feeling</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://mylymbo.com/category/news/hear/" title="View all posts filed under Hear">Hear</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://mylymbo.com/category/ml-boxing/" title="View all posts filed under ML Boxing">ML Boxing</a>
+</li>
+	<li class="cat-item cat-item-102"><a href="http://mylymbo.com/category/bible-focus/ml-nightlight/" title="Brief, concise, clear, readings of the word of God. I can&#039;t think of any better way to get centered around God&#039;s word than to read it and digest it.">ML Night Light</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://mylymbo.com/category/news/" title="View all posts filed under News">News</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://mylymbo.com/category/react/" title="View all posts filed under React">React</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://mylymbo.com/category/reacting/" title="View all posts filed under reacting">reacting</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://mylymbo.com/category/thinking/" title="View all posts filed under thinking">thinking</a>
+</li>
+ 
+			</ul>
+		</div>
+       
+    </div>
+     <div id="tab3" class="tab_content">
+   <a href='http://mylymbo.com/tag/apple/' class='tag-link-13' title='1 topic' style='font-size: 8pt;'>apple</a>
+<a href='http://mylymbo.com/tag/attention/' class='tag-link-14' title='1 topic' style='font-size: 8pt;'>attention</a>
+<a href='http://mylymbo.com/tag/authority/' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>authority</a>
+<a href='http://mylymbo.com/tag/bad/' class='tag-link-16' title='1 topic' style='font-size: 8pt;'>bad</a>
+<a href='http://mylymbo.com/tag/battle/' class='tag-link-17' title='1 topic' style='font-size: 8pt;'>battle</a>
+<a href='http://mylymbo.com/tag/battleground/' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>battleground</a>
+<a href='http://mylymbo.com/tag/belief/' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>belief</a>
+<a href='http://mylymbo.com/tag/bible/' class='tag-link-20' title='2 topics' style='font-size: 14.3pt;'>bible</a>
+<a href='http://mylymbo.com/tag/break/' class='tag-link-21' title='1 topic' style='font-size: 8pt;'>break</a>
+<a href='http://mylymbo.com/tag/charity/' class='tag-link-22' title='1 topic' style='font-size: 8pt;'>charity</a>
+<a href='http://mylymbo.com/tag/che-guevara/' class='tag-link-23' title='1 topic' style='font-size: 8pt;'>che guevara</a>
+<a href='http://mylymbo.com/tag/children/' class='tag-link-24' title='1 topic' style='font-size: 8pt;'>children</a>
+<a href='http://mylymbo.com/tag/chris-brown/' class='tag-link-25' title='1 topic' style='font-size: 8pt;'>chris brown</a>
+<a href='http://mylymbo.com/tag/christ/' class='tag-link-26' title='1 topic' style='font-size: 8pt;'>Christ</a>
+<a href='http://mylymbo.com/tag/courage/' class='tag-link-27' title='1 topic' style='font-size: 8pt;'>courage</a>
+<a href='http://mylymbo.com/tag/cursing/' class='tag-link-28' title='1 topic' style='font-size: 8pt;'>cursing</a>
+<a href='http://mylymbo.com/tag/destiny/' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>destiny</a>
+<a href='http://mylymbo.com/tag/encouragement/' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>encouragement</a>
+<a href='http://mylymbo.com/tag/existence/' class='tag-link-31' title='1 topic' style='font-size: 8pt;'>existence</a>
+<a href='http://mylymbo.com/tag/faith/' class='tag-link-32' title='3 topics' style='font-size: 18.5pt;'>faith</a>
+<a href='http://mylymbo.com/tag/focus/' class='tag-link-33' title='1 topic' style='font-size: 8pt;'>focus</a>
+<a href='http://mylymbo.com/tag/follow/' class='tag-link-34' title='1 topic' style='font-size: 8pt;'>follow</a>
+<a href='http://mylymbo.com/tag/friends/' class='tag-link-35' title='1 topic' style='font-size: 8pt;'>friends</a>
+<a href='http://mylymbo.com/tag/friendship/' class='tag-link-36' title='1 topic' style='font-size: 8pt;'>friendship</a>
+<a href='http://mylymbo.com/tag/gay/' class='tag-link-37' title='1 topic' style='font-size: 8pt;'>gay</a>
+<a href='http://mylymbo.com/tag/god/' class='tag-link-38' title='3 topics' style='font-size: 18.5pt;'>God</a>
+<a href='http://mylymbo.com/tag/graduation/' class='tag-link-39' title='1 topic' style='font-size: 8pt;'>graduation</a>
+<a href='http://mylymbo.com/tag/guidance/' class='tag-link-40' title='1 topic' style='font-size: 8pt;'>guidance</a>
+<a href='http://mylymbo.com/tag/heart/' class='tag-link-41' title='3 topics' style='font-size: 18.5pt;'>heart</a>
+<a href='http://mylymbo.com/tag/heaven/' class='tag-link-42' title='1 topic' style='font-size: 8pt;'>heaven</a>
+<a href='http://mylymbo.com/tag/holy/' class='tag-link-43' title='1 topic' style='font-size: 8pt;'>holy</a>
+<a href='http://mylymbo.com/tag/homosexuality/' class='tag-link-44' title='1 topic' style='font-size: 8pt;'>homosexuality</a>
+<a href='http://mylymbo.com/tag/idol/' class='tag-link-45' title='1 topic' style='font-size: 8pt;'>idol</a>
+<a href='http://mylymbo.com/tag/jesus/' class='tag-link-46' title='4 topics' style='font-size: 22pt;'>Jesus</a>
+<a href='http://mylymbo.com/tag/judgement/' class='tag-link-47' title='2 topics' style='font-size: 14.3pt;'>judgement</a>
+<a href='http://mylymbo.com/tag/language/' class='tag-link-48' title='1 topic' style='font-size: 8pt;'>language</a>
+<a href='http://mylymbo.com/tag/life/' class='tag-link-49' title='1 topic' style='font-size: 8pt;'>life</a>
+<a href='http://mylymbo.com/tag/love/' class='tag-link-51' title='2 topics' style='font-size: 14.3pt;'>love</a>
+<a href='http://mylymbo.com/tag/music/' class='tag-link-89' title='2 topics' style='font-size: 14.3pt;'>music</a>
+<a href='http://mylymbo.com/tag/relationship/' class='tag-link-97' title='2 topics' style='font-size: 14.3pt;'>relationship</a>
+<a href='http://mylymbo.com/tag/school/' class='tag-link-68' title='2 topics' style='font-size: 14.3pt;'>school</a>
+<a href='http://mylymbo.com/tag/scripture/' class='tag-link-100' title='2 topics' style='font-size: 14.3pt;'>scripture</a>
+<a href='http://mylymbo.com/tag/truth/' class='tag-link-79' title='2 topics' style='font-size: 14.3pt;'>truth</a>
+<a href='http://mylymbo.com/tag/women/' class='tag-link-91' title='2 topics' style='font-size: 14.3pt;'>women</a>
+<a href='http://mylymbo.com/tag/words/' class='tag-link-85' title='2 topics' style='font-size: 14.3pt;'>words</a>
+    </div>
+</div> </div>
+			<div id="sidebar">
+
+<div class="section widget_mailchimpsf_widget"><div id="sidebartitlewrapper"><h3>Sign up for the ML Box-Plot</h3></div><div class="sectioncont">	
+<div id="mc_signup">
+	<form method="post" action="#mc_signup" id="mc_signup_form">
+		<input type="hidden" id="mc_submit_type" name="mc_submit_type" value="html" />
+		<input type="hidden" name="mcsf_action" value="mc_submit_signup_form" />
+		<input type="hidden" id="_mc_submit_signup_form_nonce" name="_mc_submit_signup_form_nonce" value="d61b9c29a0" />		
+		
+	<div class="mc_form_inside">
+		
+		<div class="updated" id="mc_message">
+					</div><!-- /mc_message -->
+
+		
+<div class="mc_merge_var">
+		<label for="mc_mv_EMAIL" class="mc_var_label">Email Address<span class="mc_required">*</span></label>
+	<input type="text" size="18" value="" name="mc_mv_EMAIL" id="mc_mv_EMAIL" class="mc_input"/>
+</div><!-- /mc_merge_var -->
+<div class="mc_merge_var">
+		<label for="mc_mv_FNAME" class="mc_var_label">First Name</label>
+	<input type="text" size="18" value="" name="mc_mv_FNAME" id="mc_mv_FNAME" class="mc_input"/>
+</div><!-- /mc_merge_var -->
+<div class="mc_merge_var">
+		<label for="mc_mv_LNAME" class="mc_var_label">Last Name</label>
+	<input type="text" size="18" value="" name="mc_mv_LNAME" id="mc_mv_LNAME" class="mc_input"/>
+</div><!-- /mc_merge_var -->			<div id="mc-indicates-required">
+				* = required field			</div><!-- /mc-indicates-required -->
+			
+		<div class="mc_signup_submit">
+			<input type="submit" name="mc_signup_submit" id="mc_signup_submit" value="Subscribe" class="button" />
+		</div><!-- /mc_signup_submit -->
+	
+	
+				
+	</div><!-- /mc_form_inside -->
+	</form><!-- /mc_signup_form -->
+</div><!-- /mc_signup_container -->
+	</div></div><div class="section widget_tag_cloud"><div id="sidebartitlewrapper"><h3>Tags</h3></div><div class="sectioncont"><div class="tagcloud"><a href='http://mylymbo.com/tag/apple/' class='tag-link-13' title='1 topic' style='font-size: 8pt;'>apple</a>
+<a href='http://mylymbo.com/tag/attention/' class='tag-link-14' title='1 topic' style='font-size: 8pt;'>attention</a>
+<a href='http://mylymbo.com/tag/authority/' class='tag-link-15' title='1 topic' style='font-size: 8pt;'>authority</a>
+<a href='http://mylymbo.com/tag/bad/' class='tag-link-16' title='1 topic' style='font-size: 8pt;'>bad</a>
+<a href='http://mylymbo.com/tag/battle/' class='tag-link-17' title='1 topic' style='font-size: 8pt;'>battle</a>
+<a href='http://mylymbo.com/tag/battleground/' class='tag-link-18' title='1 topic' style='font-size: 8pt;'>battleground</a>
+<a href='http://mylymbo.com/tag/belief/' class='tag-link-19' title='1 topic' style='font-size: 8pt;'>belief</a>
+<a href='http://mylymbo.com/tag/bible/' class='tag-link-20' title='2 topics' style='font-size: 14.3pt;'>bible</a>
+<a href='http://mylymbo.com/tag/break/' class='tag-link-21' title='1 topic' style='font-size: 8pt;'>break</a>
+<a href='http://mylymbo.com/tag/charity/' class='tag-link-22' title='1 topic' style='font-size: 8pt;'>charity</a>
+<a href='http://mylymbo.com/tag/che-guevara/' class='tag-link-23' title='1 topic' style='font-size: 8pt;'>che guevara</a>
+<a href='http://mylymbo.com/tag/children/' class='tag-link-24' title='1 topic' style='font-size: 8pt;'>children</a>
+<a href='http://mylymbo.com/tag/chris-brown/' class='tag-link-25' title='1 topic' style='font-size: 8pt;'>chris brown</a>
+<a href='http://mylymbo.com/tag/christ/' class='tag-link-26' title='1 topic' style='font-size: 8pt;'>Christ</a>
+<a href='http://mylymbo.com/tag/courage/' class='tag-link-27' title='1 topic' style='font-size: 8pt;'>courage</a>
+<a href='http://mylymbo.com/tag/cursing/' class='tag-link-28' title='1 topic' style='font-size: 8pt;'>cursing</a>
+<a href='http://mylymbo.com/tag/destiny/' class='tag-link-29' title='1 topic' style='font-size: 8pt;'>destiny</a>
+<a href='http://mylymbo.com/tag/encouragement/' class='tag-link-30' title='1 topic' style='font-size: 8pt;'>encouragement</a>
+<a href='http://mylymbo.com/tag/existence/' class='tag-link-31' title='1 topic' style='font-size: 8pt;'>existence</a>
+<a href='http://mylymbo.com/tag/faith/' class='tag-link-32' title='3 topics' style='font-size: 18.5pt;'>faith</a>
+<a href='http://mylymbo.com/tag/focus/' class='tag-link-33' title='1 topic' style='font-size: 8pt;'>focus</a>
+<a href='http://mylymbo.com/tag/follow/' class='tag-link-34' title='1 topic' style='font-size: 8pt;'>follow</a>
+<a href='http://mylymbo.com/tag/friends/' class='tag-link-35' title='1 topic' style='font-size: 8pt;'>friends</a>
+<a href='http://mylymbo.com/tag/friendship/' class='tag-link-36' title='1 topic' style='font-size: 8pt;'>friendship</a>
+<a href='http://mylymbo.com/tag/gay/' class='tag-link-37' title='1 topic' style='font-size: 8pt;'>gay</a>
+<a href='http://mylymbo.com/tag/god/' class='tag-link-38' title='3 topics' style='font-size: 18.5pt;'>God</a>
+<a href='http://mylymbo.com/tag/graduation/' class='tag-link-39' title='1 topic' style='font-size: 8pt;'>graduation</a>
+<a href='http://mylymbo.com/tag/guidance/' class='tag-link-40' title='1 topic' style='font-size: 8pt;'>guidance</a>
+<a href='http://mylymbo.com/tag/heart/' class='tag-link-41' title='3 topics' style='font-size: 18.5pt;'>heart</a>
+<a href='http://mylymbo.com/tag/heaven/' class='tag-link-42' title='1 topic' style='font-size: 8pt;'>heaven</a>
+<a href='http://mylymbo.com/tag/holy/' class='tag-link-43' title='1 topic' style='font-size: 8pt;'>holy</a>
+<a href='http://mylymbo.com/tag/homosexuality/' class='tag-link-44' title='1 topic' style='font-size: 8pt;'>homosexuality</a>
+<a href='http://mylymbo.com/tag/idol/' class='tag-link-45' title='1 topic' style='font-size: 8pt;'>idol</a>
+<a href='http://mylymbo.com/tag/jesus/' class='tag-link-46' title='4 topics' style='font-size: 22pt;'>Jesus</a>
+<a href='http://mylymbo.com/tag/judgement/' class='tag-link-47' title='2 topics' style='font-size: 14.3pt;'>judgement</a>
+<a href='http://mylymbo.com/tag/language/' class='tag-link-48' title='1 topic' style='font-size: 8pt;'>language</a>
+<a href='http://mylymbo.com/tag/life/' class='tag-link-49' title='1 topic' style='font-size: 8pt;'>life</a>
+<a href='http://mylymbo.com/tag/love/' class='tag-link-51' title='2 topics' style='font-size: 14.3pt;'>love</a>
+<a href='http://mylymbo.com/tag/music/' class='tag-link-89' title='2 topics' style='font-size: 14.3pt;'>music</a>
+<a href='http://mylymbo.com/tag/relationship/' class='tag-link-97' title='2 topics' style='font-size: 14.3pt;'>relationship</a>
+<a href='http://mylymbo.com/tag/school/' class='tag-link-68' title='2 topics' style='font-size: 14.3pt;'>school</a>
+<a href='http://mylymbo.com/tag/scripture/' class='tag-link-100' title='2 topics' style='font-size: 14.3pt;'>scripture</a>
+<a href='http://mylymbo.com/tag/truth/' class='tag-link-79' title='2 topics' style='font-size: 14.3pt;'>truth</a>
+<a href='http://mylymbo.com/tag/women/' class='tag-link-91' title='2 topics' style='font-size: 14.3pt;'>women</a>
+<a href='http://mylymbo.com/tag/words/' class='tag-link-85' title='2 topics' style='font-size: 14.3pt;'>words</a></div>
+</div></div>
+
+			</div><!-- end #r-sidebar -->
+
+		</aside>  
+</section>
+</div>
+<!-- #wrapper -->
+
+<footer>
+<div id="footer1">
+  <div id="footerwrapper1">
+    <div id="fsidebar1">
+      <div class="widget"><ul><h3>Categories</h3>		<ul>
+	<li class="cat-item cat-item-3"><a href="http://mylymbo.com/category/bible-focus/" title="View all posts filed under Bible Focus">Bible Focus</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://mylymbo.com/category/featured/" title="View all posts filed under Featured">Featured</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://mylymbo.com/category/feel/" title="View all posts filed under Feel">Feel</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://mylymbo.com/category/feeling/" title="View all posts filed under feeling">feeling</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://mylymbo.com/category/news/hear/" title="View all posts filed under Hear">Hear</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://mylymbo.com/category/ml-boxing/" title="View all posts filed under ML Boxing">ML Boxing</a>
+</li>
+	<li class="cat-item cat-item-102"><a href="http://mylymbo.com/category/bible-focus/ml-nightlight/" title="Brief, concise, clear, readings of the word of God. I can&#039;t think of any better way to get centered around God&#039;s word than to read it and digest it.">ML Night Light</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://mylymbo.com/category/news/" title="View all posts filed under News">News</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://mylymbo.com/category/react/" title="View all posts filed under React">React</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://mylymbo.com/category/reacting/" title="View all posts filed under reacting">reacting</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://mylymbo.com/category/thinking/" title="View all posts filed under thinking">thinking</a>
+</li>
+		</ul>
+</ul></div>    </div>
+    <div id="fsidebar2">
+      <div class="widget"><ul><h3>Blogroll</h3>
+	<ul class='xoxo blogroll'>
+<li><a href="http://www.desiringGod.org" title="Site covering the ministry of John Piper. ">Desiring God</a></li>
+<li><a href="http://www.heartcrymissionary.com" title="A mission founded by preacher, Paul Washer. ">HeartCry Missionary Society</a></li>
+<li><a href="http://www.illbehonest.com" title="Great for videos on sound doctrine and preaching. ">I&#039;ll Be Honest</a></li>
+<li><a href="http://www.lanechaplain.com" title="Good source of current news and interviews with reformed believers. ">Lane Chaplain</a></li>
+<li><a href="http://www.thegospelcoalition.org" title="Team of pastors come together to magnify sound doctrine. ">The Gospel Coalition</a></li>
+
+	</ul>
+</ul></div>
+    </div>
+    <div id="fsidebar3">
+      <div class="widget"><ul><h3>Meta</h3>			<ul>
+						<li><a href="http://mylymbo.com/wp-login.php">Log in</a></li>
+			<li><a href="http://mylymbo.com/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://mylymbo.com/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>
+						</ul>
+</ul></div>    </div>
+    <div id="fsidebar4">
+      <!--
+      <div class="widget">
+        <ul>
+          <h3>About Our Site</h3>
+          <ul>
+                                                          </ul>
+        </ul>
+      </div>
+      -->
+    </div>
+    <div style="clear: both;"> </div>
+  </div>
+</div>
+<div id="footer2">
+<div id="footerwrapper2">
+  <div id="fotnav">
+    <ul id="fnav">
+      <center>
+              </center>
+    </ul>
+  </div>
+  <div id="fotbot">
+    <div class="fotlogoleft">
+      <div class="fotcopy"> &copy; 2010  - All Rights Reserved </div>
+    </div>
+    <div class="fotlogoright">
+      <ul id="skyline">
+        <li id="pad1"> <a href="http://www.facebook.com/pages/MyLymbocom/237638213205"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/fot-fb.png" alt="Become a Fan!" /></a></li>
+        <li id="pad1"> <a href="http://twitter.com/mylymbo"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/fot-twitter.png" alt="Follow On Twitter" /></a></li>
+        <li id="pad1"> <a href="http://mylymbo.com/?feed=atom"><img src="http://mylymbo.com/wp-content/themes/techblog-single-pro-psd/images/fot-feed.png" alt="Subcribe to Our RSS Feed" /></a></li>
+        <li>
+          <form method="get" id="footersearch" action="http://mylymbo.com/">
+            <input type="text" name="s" value="Search News - Enter Keyword" onblur="if(this.value=='') this.value='Search News - Enter Keyword';" onfocus="if(this.value=='Search News - Enter Keyword') this.value='';" id="s" />
+            <input type="submit" value=" " id="searchsubmit" />
+          </form>
+        </li>
+      </ul>
+    </div>
+    <div id="cb"></div>
+  </div>
+</div>
+</footer>
+<script src="http://bible.logos.com/jsapi/Referencetagging.js" type="text/javascript"></script>
+<script type="text/javascript">
+			Logos.ReferenceTagging.lbsBibleVersion = "ESV";
+			Logos.ReferenceTagging.lbsLibronixBibleVersion = "ESV";
+									Logos.ReferenceTagging.lbsLibronixLinkIcon = "dark";
+									Logos.ReferenceTagging.lbsNoSearchTagNames = [ "h1", "h2", "h3" ];
+															Logos.ReferenceTagging.tag();
+		</script>
+
+<!-- Google Analytics Code added by Web Ninja Google Analytics plugin v1.0.7: http://josh-fowler.com/?page_id=70 -->
+<script type='text/javascript'>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXX-X']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- Web Ninja Google Analytics Done -->
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2013Maraa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://mylymbo.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=3.4.2'></script>
+	<div style="display:none">
+	<div class="grofile-hash-map-a078aefaace50a1f2ba7eddd3bbf3a25">
+	</div>
+	<div class="grofile-hash-map-d41d8cd98f00b204e9800998ecf8427e">
+	</div>
+	<div class="grofile-hash-map-888f767804f43c357f3f1b364733fb77">
+	</div>
+	</div>
+                <script type="text/javascript">
+                var sub = document.getElementById('submit');
+                document.getElementById('recaptcha-submit-btn-area').appendChild (sub);
+                document.getElementById('submit').tabIndex = 6;
+                if ( typeof _recaptcha_wordpress_savedcomment != 'undefined') {
+                        document.getElementById('comment').value = _recaptcha_wordpress_savedcomment;
+                }
+                document.getElementById('recaptcha_table').style.direction = 'ltr';
+                </script><script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201313'></script>
+
+	<script src="http://stats.wordpress.com/e-201313.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:1.8.2',blog:'25034968',post:'110'});
+	var load_cmc = function(){linktracker_init(25034968,110,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script>
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Served from: mylymbo.com @ 2013-03-27 18:06:24 -->
